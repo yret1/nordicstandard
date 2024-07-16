@@ -2,10 +2,10 @@ import LandingVideo from "../assets/Landing.mp4";
 
 const Hero = () => {
   return (
-    <section className="w-screen h-screen relative">
+    <section className="w-screen h-screen relative bg-[url('./assets/NorwayDesktop.png')] bg-cover">
       <video
         autoPlay
-        loop
+        controls={false}
         muted
         className="w-full h-full object-cover absolute top-0 left-0"
       >
