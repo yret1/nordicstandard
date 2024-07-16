@@ -1,11 +1,37 @@
 import MenuIcon from "../assets/Menu.svg";
 import CloseIcon from "../assets/Cross.svg";
 import ArrowIcon from "../assets/Arrow.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import "../index.css";
 
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
+  const tooltipRef = useRef<HTMLDivElement>(null);
+  interface TooltipPosition {
+    top: number;
+    left: number;
+  }
+
+  const [tooltip, setTooltip] = useState({
+    show: false,
+    content: "" as string,
+    position: {} as TooltipPosition,
+  });
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (tooltip.show && tooltipRef.current) {
+      const tooltipWidth = tooltipRef.current.offsetWidth;
+      const newLeft = tooltip.position.left - tooltipWidth / 2;
+      setTooltip((prevTooltip) => ({
+        ...prevTooltip,
+        position: { ...prevTooltip.position, left: newLeft },
+      }));
+    }
+  }, [tooltip.show]);
+
   const staggerVariants = {
     hidden: {
       opacity: 0,
@@ -24,50 +50,82 @@ const Header = () => {
   const links = [
     {
       text: "Erfaring Og Meriter",
-      description: "Se våre meriter og erfaring. Våre kunder er mycket nöjda!",
+      description:
+        "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
     },
     {
       text: "Om Oss",
       description:
-        "Läs om oss och vår historia. Se vem som står bakom företaget!",
+        "Les om oss og vår historie. Se hvem som står bak selskapet!",
     },
     {
       text: "Tjenester",
-      description:
-        "Se våra tjänster och vad vi kan erbjuda dig och din verksamhet!",
+      description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
     },
     {
       text: "Kontakt",
-      description:
-        "Kontakta oss för mer information. Vi svarar inom 24 timmar!",
+      description: "Kontakt oss for mer informasjon. Vi svarer innen 24 timer!",
     },
   ];
 
-  const [isOpen, setIsOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleMouseEnter = (event: any, content: any) => {
+    const rect = event.target.getBoundingClientRect();
+
+    const description =
+      links.find((item) => item.text === content)?.description || "";
+    setTooltip({
+      show: true,
+      content: description,
+      position: {
+        top: rect.bottom + 10, // Adjust the position as needed
+        left: rect.left + rect.width / 2,
+      },
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ show: false, content: "", position: { top: 0, left: 0 } });
+  };
+
   return (
     <>
       <header className="w-screen h-12 z-20 flex-col gap-5 justify-center hidden md:flex items-center absolute top-0 left-0 bg-transparent p-10">
-        <section className="flex justify-center items-center px-5 pt-12 w-full">
-          <h1 className="text-white font-bold text-4xl text-nowrap hidden md:block">
-            Nordisk Standard
-          </h1>
-        </section>
         <section>
           <ul className="w-full justify-center flex items-center gap-5">
-            <li className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all">
-              Erfaring Og Meriter
-            </li>
-            <li className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all">
-              Om Oss
-            </li>
-            <li className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all">
-              Tjenester
-            </li>
-            <li className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all">
-              Kontakt
-            </li>
+            {["Erfaring Og Meriter", "Om Oss", "Tjenester", "Kontakt"].map(
+              (item, index) => (
+                <li
+                  key={index}
+                  className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all"
+                  onMouseEnter={(e) => handleMouseEnter(e, item)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {item}
+                </li>
+              )
+            )}
           </ul>
         </section>
+
+        <AnimatePresence>
+          {tooltip.show && (
+            <motion.div
+              ref={tooltipRef}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className=" tooltip bg-white p-2 rounded-md z-20"
+              style={{
+                top: tooltip.position.top,
+                left: tooltip.position.left,
+              }}
+            >
+              {tooltip.content}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       <header className="w-screen h-12 z-20 flex gap-5 justify-between md:hidden items-center absolute top-0 left-0 bg-transparent p-4">
