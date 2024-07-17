@@ -70,7 +70,7 @@ const GridContent: React.FC<GridContentProps> = ({
 
       <section className="flex justify-start w-full gap-6 py-6">
         <a href={href}>
-          <button className="py-2 px-4 border-[1px] border-black rounded-md">
+          <button className="py-2 px-4 border-[1px] border-black rounded-md hover:bg-green-200 transition-all duration-100">
             <p className="text-black font-medium text-2xl">{buttonText}</p>
           </button>
         </a>
