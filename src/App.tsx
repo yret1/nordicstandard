@@ -1,23 +1,20 @@
 import Header from "./components/Header";
-import Bakom from "./sections/Bakom";
 
 import Hero from "./sections/Hero";
-
-import Motivator from "./sections/Motivator";
-import Om from "./sections/Om";
+import Inleed from "./sections/Inleed";
+import Reach from "./sections/Reach";
 import Stats from "./sections/Stats";
-import Why from "./sections/Why";
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
-      <Motivator />
-      <Why />
-      <Om />
+
+      <Inleed />
+      <Reach />
+
       <Stats />
-      <Bakom />
     </>
   );
 }

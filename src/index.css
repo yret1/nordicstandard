@@ -18,5 +18,6 @@
   transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent white transparent;
+  opacity: 0.45;
+  border-color: transparent transparent black transparent;
 }

@@ -130,7 +130,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className=" tooltip bg-white p-2 rounded-md z-20"
+              className=" tooltip bg-black bg-opacity-45 text-white font-poppins p-2 rounded-md z-20"
               style={{
                 top: tooltip.position.top,
                 left: tooltip.position.left,
