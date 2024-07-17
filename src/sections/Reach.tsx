@@ -28,7 +28,7 @@ const Reach = () => {
           dataone={{ data: "Locations", value: "25" }}
           datatwo={{ data: "Rating", value: "4.9" }}
           buttonText="Contact us"
-          href="/contact"
+          href="/#kontakt"
         />
         <GridImg img="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
       </section>
@@ -38,8 +38,8 @@ const Reach = () => {
           goal="Proven Record"
           title="Airbnb Superhost!"
           desc="With a proven track record of success, we are confident that we can help you achieve your goals. Our partners see an average growth of 30% in bookings! With our superhost status we attract large amounts of guests. Let's grow together! Need more information? See who we are!"
-          buttonText="Read about us"
-          href="/about"
+          buttonText="Visit Airbnb"
+          href="https://www.airbnb.com/"
         />
       </section>
     </section>

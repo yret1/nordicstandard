@@ -38,7 +38,10 @@ const Kontakt = () => {
   };
 
   return (
-    <section className="w-screen justify-center items-start gap-6 flex flex-col md:flex-row p-6 bg-slate-100">
+    <section
+      id="kontakt"
+      className="w-screen justify-center items-start gap-6 flex flex-col md:flex-row p-6 bg-slate-100"
+    >
       <section className="w-full md:w-5/12 pt-10 md:py-20 flex flex-col justify-start items-start">
         <p className="text-black text-opacity-35 font-light font-poppins pb-4">
           Contact us
@@ -60,7 +63,7 @@ const Kontakt = () => {
           we're here to guide you through every step of the process.
         </p>
 
-        <form className="w-full" action="">
+        <form className="w-full" action={(e: React.FormEvent) => Submit(e)}>
           <fieldset className="w-full py-2 flex md:flex-row flex-col justify-center gap-6">
             <section className="w-full">
               <label
@@ -190,7 +193,10 @@ const Kontakt = () => {
 
           <fieldset className="w-full py-2 flex justify-center gap-6">
             <section className="w-full">
-              <button className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-100 text-2xl font-medium text-white">
+              <button
+                type="submit"
+                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-100 text-2xl font-medium text-white"
+              >
                 {submitting ? (
                   <Lottie animationData={Loading} />
                 ) : (
