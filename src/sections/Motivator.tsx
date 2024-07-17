@@ -1,6 +1,7 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-
+import Howbox from "../components/Howbox";
+import bg from "../assets/ErfaringWave.svg";
 const Motivator = () => {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -15,8 +16,9 @@ const Motivator = () => {
   }, [controls, inView]);
   return (
     <section
+      style={{ backgroundImage: `url(${bg})` }}
       id="erfaring"
-      className="w-screen min-h-96 flex gap-20 flex-col justify-center items-center bg-[url('../assets/ErfaringWave.svg')] bg-cover"
+      className="w-screen min-h-96 flex gap-20 pt-20 flex-col justify-center items-center relative bg-cover bg-bottom pb-32"
     >
       <p className="text-black font-bold font-poppins text-center md:text-center text-4xl">
         Vi har hatt flere{" "}
@@ -33,12 +35,16 @@ const Motivator = () => {
 
       <section className="w-screen flex flex-col justify-start items-center">
         <section>
-          <p className="font-bold text-black text-2xl md:text-5xl">
+          <p className="font-bold text-black text-2xl md:text-5xl pb-6">
             Hvordan funkar det?
           </p>
         </section>
 
-        <section className="w-screen flex justify-center items-center gap-6"></section>
+        <section className="w-screen flex flex-col md:flex-row min-h-[600px] justify-center items-center gap-2 md:gap-6">
+          <Howbox version="1" />
+          <Howbox version="2" />
+          <Howbox version="3" />
+        </section>
       </section>
     </section>
   );

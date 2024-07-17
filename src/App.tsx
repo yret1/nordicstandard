@@ -1,8 +1,11 @@
 import Header from "./components/Header";
 
 import Hero from "./sections/Hero";
-import Reviews from "./sections/Reviews";
+
 import Motivator from "./sections/Motivator";
+import Om from "./sections/Om";
+import Stats from "./sections/Stats";
+import Why from "./sections/Why";
 
 function App() {
   return (
@@ -10,7 +13,9 @@ function App() {
       <Header />
       <Hero />
       <Motivator />
-      <Reviews />
+      <Why />
+      <Om />
+      <Stats />
     </>
   );
 }
