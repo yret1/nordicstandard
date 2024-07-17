@@ -7,6 +7,9 @@ import Chat from "../assets/Chat.svg";
 const Services = () => {
   return (
     <section className="w-full flex flex-col justify-center items-center">
+      <h3 className="text-black font-bold font-poppins text-xl md:text-2xl lg:text-3xl py-10">
+        Just some of the things we do!
+      </h3>
       <section className="grid w-full md:w-10/12 lg:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2">
         <ServiceBox
           title="Booligpartner"
