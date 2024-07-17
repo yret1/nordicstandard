@@ -30,6 +30,7 @@ const Header = () => {
         position: { ...prevTooltip.position, left: newLeft },
       }));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tooltip.show]);
 
   const staggerVariants = {
@@ -52,24 +53,29 @@ const Header = () => {
       text: "Erfaring Og Meriter",
       description:
         "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
+      href: "/#erfaring",
     },
     {
       text: "Visjon",
       description:
         "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
+      href: "/#visjon",
     },
     {
       text: "Om Oss",
       description:
         "Les om oss og vår historie. Se hvem som står bak selskapet!",
+      href: "/#omoss",
     },
     {
       text: "Tjenester",
       description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
+      href: "/#services",
     },
     {
       text: "Kontakt",
       description: "Kontakt oss for mer informasjon. Vi svarer innen 24 timer!",
+      href: "/#kontakt",
     },
   ];
 
@@ -77,8 +83,7 @@ const Header = () => {
   const handleMouseEnter = (event: any, content: any) => {
     const rect = event.target.getBoundingClientRect();
 
-    const description =
-      links.find((item) => item.text === content)?.description || "";
+    const description = content.description;
     setTooltip({
       show: true,
       content: description,
@@ -103,21 +108,16 @@ const Header = () => {
         </section>
         <section>
           <ul className="w-full justify-center flex items-center gap-5">
-            {[
-              "Erfaring Og Meriter",
-              "Om Oss",
-              "Visjon",
-              "Tjenester",
-              "Kontakt",
-            ].map((item, index) => (
-              <li
-                key={index}
-                className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all"
-                onMouseEnter={(e) => handleMouseEnter(e, item)}
-                onMouseLeave={handleMouseLeave}
-              >
-                {item}
-              </li>
+            {links.map((item, index) => (
+              <a key={index} href={item.href}>
+                <li
+                  className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all"
+                  onMouseEnter={(e) => handleMouseEnter(e, item)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {item.text}
+                </li>
+              </a>
             ))}
           </ul>
         </section>
@@ -168,22 +168,32 @@ const Header = () => {
             >
               <motion.ul initial="hidden" animate="visible">
                 {links.map((item, index) => (
-                  <motion.li
-                    key={index}
+                  <motion.a
+                    onClick={() => setIsOpen(false)}
                     custom={index}
                     variants={staggerVariants}
-                    className="p-5 m-4 flex justify-center gap-4 items-center"
+                    href={item.href}
+                    key={index}
                   >
-                    <div>
-                      <p className="font-bold text-sm text-black">
-                        {item.text}
-                      </p>
-                      <p className="text-xs font-normal text-black">
-                        {item.description}
-                      </p>
-                    </div>
-                    <img src={ArrowIcon} className="w-4 h-4" alt="Go to link" />
-                  </motion.li>
+                    <li
+                      key={index}
+                      className="p-5 m-4 flex justify-center gap-4 items-center"
+                    >
+                      <div>
+                        <p className="font-bold text-sm text-black">
+                          {item.text}
+                        </p>
+                        <p className="text-xs font-normal text-black">
+                          {item.description}
+                        </p>
+                      </div>
+                      <img
+                        src={ArrowIcon}
+                        className="w-4 h-4"
+                        alt="Go to link"
+                      />
+                    </li>
+                  </motion.a>
                 ))}
               </motion.ul>
             </motion.section>

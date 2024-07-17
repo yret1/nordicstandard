@@ -6,7 +6,10 @@ import Chat from "../assets/Chat.svg";
 
 const Services = () => {
   return (
-    <section className="w-full flex flex-col justify-center items-center">
+    <section
+      id="services"
+      className="w-full flex flex-col justify-center items-center"
+    >
       <h3 className="text-black font-bold font-poppins text-xl md:text-2xl lg:text-3xl py-10">
         Just some of the things we do!
       </h3>
