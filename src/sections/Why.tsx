@@ -1,3 +1,4 @@
+import Kontakt from "../components/Kontakt";
 import Whybox from "../components/Whybox";
 
 const Why = () => {
@@ -19,7 +20,7 @@ const Why = () => {
     },
   ];
   return (
-    <section className="bg-[#0e49ff] w-screen min-h-screen flex flex-col justify-start py-10 items-center">
+    <section className="bg-[#0e49ff] w-screen min-h-screen flex flex-col justify-start py-10 items-center pb-20">
       <section className="w-screen">
         <h4 className="text-white font-poppins text-3xl font-bold text-center">
           Hvorfor <br />
@@ -38,6 +39,7 @@ const Why = () => {
           />
         ))}
       </section>
+      <Kontakt />
     </section>
   );
 };

@@ -2,6 +2,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Howbox from "../components/Howbox";
 import bg from "../assets/ErfaringWave.svg";
+import Kontakt from "../components/Kontakt";
 const Motivator = () => {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -46,6 +47,7 @@ const Motivator = () => {
           <Howbox version="3" />
         </section>
       </section>
+      <Kontakt />
     </section>
   );
 };

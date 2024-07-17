@@ -1,28 +1,25 @@
 import temphouse from "../assets/Temphouse.jpg";
-import Location from "../assets/Location.svg";
+import Profile from "../assets/Profile.png";
 const ReviewCard = () => {
   return (
-    <a className="cursor-pointer hover:scale-105 transition-all">
-      <article className="relative w-11/12 h-52 bg-white md:w-96 md:h-80 overflow-hidden rounded-lg">
-        <img src={temphouse} className="object-cover h-full" />
+    <article className="w-full h-full rounded-md overflow-hidden relative shadow-md hover:scale-105 hover:rotate-3 transition-all duration-150">
+      <img src={temphouse} />
 
-        <section className="flex justify-start items-center absolute top-1 left-1 bg-black rounded-lg overflow-hidden p-2">
-          <p className="font-poppins text-xl text-white">Brighton, UK</p>
-          <img src={Location} className="w-6 h-6" />
-        </section>
+      <section className="absolute top-2 left-2 flex justify-start items-center gap-2 text-white font-poppins p-2 rounded-md">
+        <div className="h-10 w-10 border-2 border-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] rounded-full overflow-hidden bg-white">
+          <img src={Profile} />
+        </div>
+        <p className="text-white font-bold font-poppins drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+          Simon G
+        </p>
+      </section>
 
-        <section className="absolute w-full h-12 md:h-20 bg-black bg-opacity-60 z-20 bottom-0 left-0 flex justify-between items-center">
-          <section className="flex-col p-4">
-            <q className="font-bold text-white font-poppins">
-              An amazing experience. Higly recommended!
-            </q>
-            <p className="font-poppins text-white text-opacity-40">
-              Simon, Sweden
-            </p>
-          </section>
-        </section>
-      </article>
-    </a>
+      <q className="font-poppins text-white font-bold absolute text-sm md:text-lg lg:text-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] bottom-2 left-2 p-4">
+        Working with Nordisk Standard is a hassle free experience. They handle
+        it all and my revenue has greatly increased since the start of our
+        collaboration!
+      </q>
+    </article>
   );
 };
 
