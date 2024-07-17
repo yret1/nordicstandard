@@ -15,7 +15,7 @@ const Hero = () => {
       <section className="w-full h-full flex justify-start items-end bg-black bg-opacity-30 absolute top-0 pb-20 p-5 md:p-10 left-0">
         <section className=" flex flex-col gap-4 justify-start">
           <h2 className="text-white font-bold text-3xl font-poppins md:text-6xl">
-            Nordisk Standard
+            Airbnb Partner
           </h2>
           <p className="text-white font-medium texl-lg md:text-xl font-poppins md:w-4/12">
             Vi hjelper våre boligpartnere med å øke utleieverdien ved å gi

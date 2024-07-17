@@ -54,6 +54,11 @@ const Header = () => {
         "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
     },
     {
+      text: "Visjon",
+      description:
+        "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
+    },
+    {
       text: "Om Oss",
       description:
         "Les om oss og vår historie. Se hvem som står bak selskapet!",
@@ -90,21 +95,30 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-screen h-12 z-20 flex-col gap-5 justify-center hidden md:flex items-center absolute top-0 left-0 bg-transparent p-10">
+      <header className="w-screen h-12 z-20 flex-col gap-2 justify-center hidden md:flex items-center absolute top-0 left-0 bg-transparent  p-10">
+        <section className="pt-10">
+          <h1 className="font-bold text-4xl font-poppins text-center text-white">
+            Nordisk Standard
+          </h1>
+        </section>
         <section>
           <ul className="w-full justify-center flex items-center gap-5">
-            {["Erfaring Og Meriter", "Om Oss", "Tjenester", "Kontakt"].map(
-              (item, index) => (
-                <li
-                  key={index}
-                  className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all"
-                  onMouseEnter={(e) => handleMouseEnter(e, item)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {item}
-                </li>
-              )
-            )}
+            {[
+              "Erfaring Og Meriter",
+              "Om Oss",
+              "Visjon",
+              "Tjenester",
+              "Kontakt",
+            ].map((item, index) => (
+              <li
+                key={index}
+                className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all"
+                onMouseEnter={(e) => handleMouseEnter(e, item)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </section>
 
