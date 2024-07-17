@@ -1,7 +1,7 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Howbox from "../components/Howbox";
-import bg from "../assets/ErfaringWave.svg";
+
 import Kontakt from "../components/Kontakt";
 const Motivator = () => {
   const controls = useAnimation();
@@ -17,9 +17,8 @@ const Motivator = () => {
   }, [controls, inView]);
   return (
     <section
-      style={{ backgroundImage: `url(${bg})` }}
       id="erfaring"
-      className="w-screen min-h-96 flex gap-20 pt-20 flex-col justify-center items-center relative bg-cover bg-bottom pb-32"
+      className="w-screen min-h-96 flex gap-20 pt-20 flex-col justify-center items-center relative bg-cover bg-bottom bg-topWave pb-32"
     >
       <p className="text-black font-bold font-poppins text-center md:text-center text-4xl">
         Vi har hatt flere{" "}

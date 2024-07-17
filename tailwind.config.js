@@ -6,6 +6,10 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        topWave: "url('./src/assets/ErfaringWave.svg')",
+        botWave: "url('./src/assets/BottomWave.svg')",
+      },
     },
   },
   plugins: [],

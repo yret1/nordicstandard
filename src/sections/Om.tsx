@@ -1,12 +1,8 @@
-import bg from "../assets/BottomWave.svg";
 import ReviewCard from "../components/ReviewCard";
 
 const Om = () => {
   return (
-    <section
-      style={{ backgroundImage: `url(${bg})` }}
-      className="w-screen min-h-screen bg-cover bg-top"
-    >
+    <section className="w-screen min-h-screen bg-cover bg-top bg-botWave">
       <h4 className="text-white font-poppins font-bold text-center text-3xl">
         Se Vad vare Partner Sejer
       </h4>
