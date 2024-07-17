@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Bakom from "./sections/Bakom";
 
 import Hero from "./sections/Hero";
 
@@ -16,6 +17,7 @@ function App() {
       <Why />
       <Om />
       <Stats />
+      <Bakom />
     </>
   );
 }

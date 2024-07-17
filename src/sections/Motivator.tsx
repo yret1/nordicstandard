@@ -36,7 +36,7 @@ const Motivator = () => {
       <section className="w-screen flex flex-col justify-start items-center">
         <section>
           <p className="font-bold text-black text-2xl md:text-5xl pb-6">
-            Hvordan funkar det?
+            Hvordan virker det?
           </p>
         </section>
 
