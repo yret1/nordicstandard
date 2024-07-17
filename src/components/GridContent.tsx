@@ -2,11 +2,11 @@ interface GridContentProps {
   goal: string;
   title: string;
   desc: string;
-  dataone: {
+  dataone?: {
     data: string;
     value: string;
   };
-  datatwo: {
+  datatwo?: {
     data: string;
     value: string;
   };
@@ -40,18 +40,33 @@ const GridContent: React.FC<GridContentProps> = ({
       </section>
       <hr className="w-full" />
 
-      <section className="flex justify-center items-center gap-6 p-6">
-        <div>
-          <p className="font-bold text-blue-700 text-4xl">{dataone.data}</p>
-          <p className="font-bold text-blue-700 text-4xl">{dataone.value} +</p>
-        </div>
-        <div>
-          <p className="font-bold text-blue-700 text-4xl">{datatwo.data}</p>
-          <p className="font-bold text-blue-700 text-4xl">{datatwo.value} +</p>
-        </div>
-      </section>
-
-      <hr className="w-full" />
+      {(dataone || datatwo) && (
+        <>
+          <section className="flex justify-center items-center gap-6 p-6">
+            {dataone && (
+              <div>
+                <p className="font-bold text-blue-700 text-4xl">
+                  {dataone.data}
+                </p>
+                <p className="font-bold text-blue-700 text-4xl">
+                  {dataone.value} +
+                </p>
+              </div>
+            )}
+            {datatwo && (
+              <div>
+                <p className="font-bold text-blue-700 text-4xl">
+                  {datatwo.data}
+                </p>
+                <p className="font-bold text-blue-700 text-4xl">
+                  {datatwo.value} +
+                </p>
+              </div>
+            )}
+          </section>
+          <hr className="w-full" />
+        </>
+      )}
 
       <section className="flex justify-start w-full gap-6 py-6">
         <a href={href}>
