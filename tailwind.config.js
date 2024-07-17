@@ -7,8 +7,8 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        topWave: "url('./src/assets/ErfaringWave.svg')",
-        botWave: "url('./src/assets/BottomWave.svg')",
+        topWave: "url('./assets/ErfaringWave.svg')",
+        botWave: "url('./assets/BottomWave.svg')",
       },
     },
   },
