@@ -7,6 +7,7 @@ import Reach from "./sections/Reach";
 import Services from "./sections/Services";
 import Stats from "./sections/Stats";
 import { useEffect } from "react";
+import Socialproof from "./sections/Socialproof";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,8 @@ function App() {
 
       <Inleed />
       <Reach />
+
+      <Socialproof />
 
       <Services />
 
