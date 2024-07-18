@@ -1,39 +1,65 @@
 import { useState } from "react";
-import Loading from "../assets/Anims/Loading.json";
-import Lottie from "lottie-react";
+
 const Kontakt = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const [error, setError] = useState(false);
-
+  const [result, setResult] = useState("Send Message");
+  const [sent, setSent] = useState(false);
   const [mail, setMail] = useState({
     name: "",
     company: "",
     email: "",
     country: "",
-    properties: 0,
-    locations: 0,
+    properties: "",
+    locations: "",
     message: "",
   });
 
-  const Submit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const message = {
-      name: mail.name,
-      company: mail.company,
-      email: mail.email,
-      country: mail.country,
-      properties: mail.properties,
-      locations: mail.locations,
-      message: mail.message,
-    };
+    if (mail.name == "" || mail.email == "" || mail.message == "") {
+      setResult("Please fill in all fields");
 
-    try {
-      setSubmitting(true);
-    } catch (error) {
+      setTimeout(() => {
+        setResult("Send Message");
+      });
+    } else setSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    const key = "9c4cd1b2-5807-456a-b38c-af7a1279bbaf";
+
+    formData.append("access_key", `${key}`);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Message Sent");
+      setMail({
+        name: "",
+        company: "",
+        email: "",
+        country: "",
+        properties: "",
+        locations: "",
+        message: "",
+      });
+
       setSubmitting(false);
-      setError(true);
+      setSent(true);
+
+      setTimeout(() => {
+        setResult("Send Message");
+      }, 2000);
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
     }
   };
 
@@ -63,7 +89,7 @@ const Kontakt = () => {
           we're here to guide you through every step of the process.
         </p>
 
-        <form className="w-full" action={(e: React.FormEvent) => Submit(e)}>
+        <form className="w-full" onSubmit={(e) => onSubmit(e)}>
           <fieldset className="w-full py-2 flex md:flex-row flex-col justify-center gap-6">
             <section className="w-full">
               <label
@@ -74,6 +100,8 @@ const Kontakt = () => {
               </label>
               <input
                 required
+                onChange={(e) => setMail({ ...mail, name: e.target.value })}
+                value={mail.name}
                 type="text"
                 id="name"
                 name="name"
@@ -89,6 +117,8 @@ const Kontakt = () => {
                 Company Name (Optional)
               </label>
               <input
+                onChange={(e) => setMail({ ...mail, company: e.target.value })}
+                value={mail.company}
                 type="text"
                 id="company"
                 name="company"
@@ -107,6 +137,8 @@ const Kontakt = () => {
                 Email*
               </label>
               <input
+                onChange={(e) => setMail({ ...mail, email: e.target.value })}
+                value={mail.email}
                 type="email"
                 required
                 id="email"
@@ -117,15 +149,17 @@ const Kontakt = () => {
             </section>
             <section className="w-full">
               <label
-                htmlFor="name"
+                htmlFor="country"
                 className="text-black font-poppins font-medium pb-4"
               >
                 Country*
               </label>
               <select
-                id="name"
+                onChange={(e) => setMail({ ...mail, country: e.target.value })}
+                value={mail.country}
+                id="country"
                 required
-                name="name"
+                name="country"
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               >
                 <option defaultChecked value="Norway">
@@ -147,6 +181,10 @@ const Kontakt = () => {
                 Number of properties*
               </label>
               <input
+                onChange={(e) =>
+                  setMail({ ...mail, properties: e.target.value })
+                }
+                value={mail.properties}
                 required
                 type="number"
                 id="properties"
@@ -164,6 +202,10 @@ const Kontakt = () => {
               </label>
               <input
                 required
+                onChange={(e) =>
+                  setMail({ ...mail, locations: e.target.value })
+                }
+                value={mail.locations}
                 type="number"
                 id="locations"
                 name="locations"
@@ -183,6 +225,8 @@ const Kontakt = () => {
               </label>
               <textarea
                 required
+                onChange={(e) => setMail({ ...mail, message: e.target.value })}
+                value={mail.message}
                 id="message"
                 name="message"
                 placeholder="What can we do for you?"
@@ -195,13 +239,11 @@ const Kontakt = () => {
             <section className="w-full">
               <button
                 type="submit"
-                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-100 text-2xl font-medium text-white"
+                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-100 text-2xl font-medium text-white"
               >
-                {submitting ? (
-                  <Lottie animationData={Loading} />
-                ) : (
-                  <p>Send Message</p>
-                )}
+                {submitting && <p>Sending...</p>}
+                {!submitting && result && <p>{result}</p>}
+                {!submitting && !result && !sent && <p>Send Message</p>}
               </button>
             </section>
           </fieldset>

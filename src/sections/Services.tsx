@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full flex flex-col justify-center items-center"
+      className="w-full flex flex-col justify-center items-center p-4"
     >
       <h3 className="text-black font-bold font-poppins text-xl md:text-2xl lg:text-3xl py-10">
         Just some of the things we do!

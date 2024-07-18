@@ -4,7 +4,7 @@ import GridImg from "../components/GridImg";
 const Reach = () => {
   return (
     <section className="w-screen flex flex-col gap-12 justify-center items-center">
-      <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+      <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 md:grid flex flex-col grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
         <GridImg img="https://images.unsplash.com/photo-1642010652250-2215cfb459ac?q=80&w=3419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         <GridContent
           goal="Reach your goals"
@@ -20,7 +20,7 @@ const Reach = () => {
         />
       </section>
 
-      <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+      <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 md:grid flex flex-col-reverse grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
         <GridContent
           goal="Relax and enjoy"
           title="Let us handle the hard work."

@@ -1,3 +1,7 @@
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 interface GridContentProps {
   goal: string;
   title: string;
@@ -23,59 +27,112 @@ const GridContent: React.FC<GridContentProps> = ({
   buttonText,
   href,
 }) => {
+  const controls = useAnimation();
+  const { ref: sectionRef, inView: sectionInView } = useInView({
+    triggerOnce: true, // animation triggers only once
+    threshold: 0.2, // triggers when 10% of the component is in view
+  });
+
+  useEffect(() => {
+    if (sectionInView) {
+      controls.start("visible");
+    }
+  }, [controls, sectionInView]);
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
   return (
-    <section className="w-full h-full flex flex-col justify-evenly items-center">
-      <section className="flex justify-start items-start w-full pb-6">
-        <p className="text-black font-bold font-poppins text-xl text-opacity-35">
+    <motion.section
+      initial="hidden"
+      animate={controls}
+      variants={containerVariants}
+      className="w-full h-full flex flex-col justify-evenly items-center"
+      ref={sectionRef}
+    >
+      <motion.section className="flex justify-start items-start w-full pb-6">
+        <motion.p
+          className="text-black font-bold font-poppins text-xl text-opacity-35"
+          variants={itemVariants}
+        >
           {goal}
-        </p>
-      </section>
+        </motion.p>
+      </motion.section>
       <hr className="w-full" />
 
-      <section className="w-full py-6">
-        <h4 className="font-bold text-black font-poppins text-5xl pb-5">
+      <motion.section
+        className="w-full py-6"
+        initial="hidden"
+        animate={controls}
+        variants={containerVariants}
+      >
+        <motion.h4
+          className="font-bold text-black font-poppins text-5xl pb-5"
+          variants={itemVariants}
+        >
           {title}
-        </h4>
-        <p>{desc}</p>
-      </section>
+        </motion.h4>
+        <motion.p variants={itemVariants}>{desc}</motion.p>
+      </motion.section>
       <hr className="w-full" />
 
       {(dataone || datatwo) && (
         <>
-          <section className="flex justify-center items-center gap-6 p-6">
+          <motion.section
+            className="flex justify-center items-center gap-6 p-6"
+            initial="hidden"
+            animate={controls}
+            variants={containerVariants}
+          >
             {dataone && (
-              <div>
+              <motion.div className="opacity-100" variants={itemVariants}>
                 <p className="font-bold text-blue-700 text-4xl">
                   {dataone.data}
                 </p>
                 <p className="font-bold text-blue-700 text-4xl">
                   {dataone.value} +
                 </p>
-              </div>
+              </motion.div>
             )}
             {datatwo && (
-              <div>
+              <motion.div className="opacity-100" variants={itemVariants}>
                 <p className="font-bold text-blue-700 text-4xl">
                   {datatwo.data}
                 </p>
                 <p className="font-bold text-blue-700 text-4xl">
                   {datatwo.value} +
                 </p>
-              </div>
+              </motion.div>
             )}
-          </section>
+          </motion.section>
           <hr className="w-full" />
         </>
       )}
 
-      <section className="flex justify-start w-full gap-6 py-6">
-        <a href={href}>
+      <motion.section
+        className="flex justify-start w-full gap-6 py-6"
+        initial="hidden"
+        animate={controls}
+        variants={containerVariants}
+      >
+        <motion.a href={href} variants={itemVariants}>
           <button className="py-2 px-4 border-[1px] border-black rounded-md hover:bg-green-200 transition-all duration-100">
             <p className="text-black font-medium text-2xl">{buttonText}</p>
           </button>
-        </a>
-      </section>
-    </section>
+        </motion.a>
+      </motion.section>
+    </motion.section>
   );
 };
 
