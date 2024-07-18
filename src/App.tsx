@@ -8,6 +8,7 @@ import Services from "./sections/Services";
 import Stats from "./sections/Stats";
 
 import Socialproof from "./sections/Socialproof";
+import About from "./sections/About";
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
 
       <Socialproof />
 
+      <Stats />
       <Services />
 
-      <Stats />
+      <About />
 
       <Kontakt />
 

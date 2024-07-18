@@ -22,10 +22,11 @@ const Hero = () => {
             enestående opplevelser til våre gjester og leietakere. Sånn at de
             kan bruke mer tid på det de ønsker.
           </p>
-
-          <button className="text-white bg-transparent ont-poppins backdrop-blur-sm p-4 border-2 md:w-2/12 md:hover:font-bold md:hover:scale-110 transition-all duration-300">
-            Finne ut mer
-          </button>
+          <a href="/#reach">
+            <button className="text-white bg-transparent ont-poppins backdrop-blur-sm p-4 border-2 md:w-2/12 md:hover:font-bold md:hover:scale-110 transition-all duration-300">
+              Finne ut mer
+            </button>
+          </a>
         </section>
       </section>
     </section>

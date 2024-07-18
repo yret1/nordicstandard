@@ -53,7 +53,7 @@ const Header = () => {
       text: "Erfaring Og Meriter",
       description:
         "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
-      href: "/#erfaring",
+      href: "/#meriter",
     },
     {
       text: "Visjon",
@@ -65,7 +65,7 @@ const Header = () => {
       text: "Om Oss",
       description:
         "Les om oss og vår historie. Se hvem som står bak selskapet!",
-      href: "/#omoss",
+      href: "/#om",
     },
     {
       text: "Tjenester",
@@ -177,7 +177,11 @@ const Header = () => {
                   >
                     <li
                       key={index}
-                      className="p-5 m-4 flex justify-center gap-4 items-center"
+                      className={`p-5 m-4 flex justify-center gap-4 items-center  ${
+                        links.length - 1 === index
+                          ? "border-2 border-black rounded-lg"
+                          : ""
+                      }`}
                     >
                       <div>
                         <p className="font-bold text-sm text-black">
