@@ -1,18 +1,15 @@
 import Header from "./components/Header";
-import CookieConsent, { resetCookieConsentValue } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 import Hero from "./sections/Hero";
 import Inleed from "./sections/Inleed";
 import Kontakt from "./sections/Kontakt";
 import Reach from "./sections/Reach";
 import Services from "./sections/Services";
 import Stats from "./sections/Stats";
-import { useEffect } from "react";
+
 import Socialproof from "./sections/Socialproof";
 
 function App() {
-  useEffect(() => {
-    resetCookieConsentValue();
-  });
   return (
     <>
       <Header />
