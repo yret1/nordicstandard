@@ -15,11 +15,11 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
 }) => {
   return (
     <article className="w-full h-auto border-[1px] border-black rounded-md shadow-md">
-      <figure className="w-full h-40 md:h-60 lg:h-96 overflow-hidden">
+      <figure className="w-full h-60 md:h-72 lg:h-96 overflow-hidden p-4">
         <img
           src={img}
           alt={`${name} profile image`}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center rounded-md"
         />
       </figure>
       <section className="w-full p-4 flex flex-col gap-4">
