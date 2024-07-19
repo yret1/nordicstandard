@@ -7,6 +7,34 @@ import "../index.css";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+export const links = [
+  {
+    text: "Erfaring Og Meriter",
+    description: "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
+    href: "/#meriter",
+  },
+  {
+    text: "Visjon",
+    description:
+      "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
+    href: "/#visjon",
+  },
+  {
+    text: "Om Oss",
+    description: "Les om oss og vår historie. Se hvem som står bak selskapet!",
+    href: "/#om",
+  },
+  {
+    text: "Tjenester",
+    description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
+    href: "/#services",
+  },
+  {
+    text: "Kontakt",
+    description: "Kontakt oss for mer informasjon. Vi svarer innen 24 timer!",
+    href: "/#kontakt",
+  },
+];
 const Header = () => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   interface TooltipPosition {
@@ -47,37 +75,6 @@ const Header = () => {
       },
     }),
   };
-
-  const links = [
-    {
-      text: "Erfaring Og Meriter",
-      description:
-        "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
-      href: "/#meriter",
-    },
-    {
-      text: "Visjon",
-      description:
-        "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
-      href: "/#visjon",
-    },
-    {
-      text: "Om Oss",
-      description:
-        "Les om oss og vår historie. Se hvem som står bak selskapet!",
-      href: "/#om",
-    },
-    {
-      text: "Tjenester",
-      description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
-      href: "/#services",
-    },
-    {
-      text: "Kontakt",
-      description: "Kontakt oss for mer informasjon. Vi svarer innen 24 timer!",
-      href: "/#kontakt",
-    },
-  ];
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleMouseEnter = (event: any, content: any) => {

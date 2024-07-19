@@ -10,6 +10,7 @@ import Stats from "./sections/Stats";
 import Socialproof from "./sections/Socialproof";
 import About from "./sections/About";
 import Vision from "./sections/Vision";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <About />
 
         <Kontakt />
+
+        <Footer />
 
         <CookieConsent
           location="bottom"
