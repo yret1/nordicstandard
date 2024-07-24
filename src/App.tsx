@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import CookieConsent from "react-cookie-consent";
 import Hero from "./sections/Hero";
-import Inleed from "./sections/Inleed";
 import Kontakt from "./sections/Kontakt";
 import Reach from "./sections/Reach";
 import Services from "./sections/Services";
@@ -19,7 +18,6 @@ function App() {
         <Header />
         <Hero />
 
-        <Inleed />
         <Reach />
 
         <Socialproof />

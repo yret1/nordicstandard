@@ -7,11 +7,8 @@ const Kontakt = () => {
   const [sent, setSent] = useState(false);
   const [mail, setMail] = useState({
     name: "",
-    company: "",
+    phone: "",
     email: "",
-    country: "",
-    properties: "",
-    locations: "",
     message: "",
   });
 
@@ -43,11 +40,8 @@ const Kontakt = () => {
       setResult("Message Sent");
       setMail({
         name: "",
-        company: "",
+        phone: "",
         email: "",
-        country: "",
-        properties: "",
-        locations: "",
         message: "",
       });
 
@@ -111,18 +105,18 @@ const Kontakt = () => {
             </section>
             <section className="w-full">
               <label
-                htmlFor="company"
+                htmlFor="tel"
                 className="text-black font-poppins font-medium pb-4"
               >
-                Company Name (Optional)
+                Telephone Number
               </label>
               <input
-                onChange={(e) => setMail({ ...mail, company: e.target.value })}
-                value={mail.company}
+                onChange={(e) => setMail({ ...mail, phone: e.target.value })}
+                value={mail.phone}
                 type="text"
-                id="company"
-                name="company"
-                placeholder="Company"
+                id="tel"
+                name="tel"
+                placeholder="+12 345 678"
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               />
             </section>
@@ -147,72 +141,6 @@ const Kontakt = () => {
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               />
             </section>
-            <section className="w-full">
-              <label
-                htmlFor="country"
-                className="text-black font-poppins font-medium pb-4"
-              >
-                Country*
-              </label>
-              <select
-                onChange={(e) => setMail({ ...mail, country: e.target.value })}
-                value={mail.country}
-                id="country"
-                required
-                name="country"
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
-              >
-                <option defaultChecked value="Norway">
-                  Norway
-                </option>
-                <option value="Sweden">Sweden</option>
-
-                <option value="Denmark">Denmark</option>
-              </select>
-            </section>
-          </fieldset>
-
-          <fieldset className="w-full py-2 md:flex-row flex-col flex justify-center gap-6">
-            <section className="w-full">
-              <label
-                htmlFor="properties"
-                className="text-black font-poppins font-medium pb-4"
-              >
-                Number of properties*
-              </label>
-              <input
-                onChange={(e) =>
-                  setMail({ ...mail, properties: e.target.value })
-                }
-                value={mail.properties}
-                required
-                type="number"
-                id="properties"
-                name="properties"
-                placeholder="Please enter a number"
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
-              />
-            </section>
-            <section className="w-full">
-              <label
-                htmlFor="email"
-                className="text-black font-poppins font-medium pb-4"
-              >
-                Number of locations*
-              </label>
-              <input
-                required
-                onChange={(e) =>
-                  setMail({ ...mail, locations: e.target.value })
-                }
-                value={mail.locations}
-                type="number"
-                id="locations"
-                name="locations"
-                placeholder="How many different locations?"
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
-              />
-            </section>
           </fieldset>
 
           <fieldset className="w-full py-2 flex justify-center gap-6">
@@ -230,6 +158,7 @@ const Kontakt = () => {
                 id="message"
                 name="message"
                 placeholder="What can we do for you?"
+                cols={60}
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               />
             </section>

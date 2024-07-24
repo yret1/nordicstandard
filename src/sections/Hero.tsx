@@ -14,16 +14,16 @@ const Hero = () => {
       </video>
       <section className="w-full h-full flex justify-start items-end bg-black bg-opacity-30 absolute top-0 pb-20 p-5 md:p-10 left-0">
         <section className=" flex flex-col gap-4 justify-start">
-          <h2 className="text-white font-bold text-3xl font-poppins md:text-6xl">
-            Airbnb Partner
+          <h2 className="text-white text-center font-bold text-3xl font-poppins md:text-6xl">
+            Utleie partner
           </h2>
-          <p className="text-white font-medium texl-lg md:text-xl font-poppins md:w-4/12">
+          <p className="text-white font-medium  texl-lg md:text-xl font-poppins md:w-4/12">
             Vi hjelper våre boligpartnere med å øke utleieverdien ved å gi
             enestående opplevelser til våre gjester og leietakere. Sånn at de
             kan bruke mer tid på det de ønsker.
           </p>
-          <a href="/#reach">
-            <button className="text-white bg-transparent ont-poppins backdrop-blur-sm p-4 border-2 md:w-2/12 md:hover:font-bold md:hover:scale-110 transition-all duration-300">
+          <a href="/#reach" className="w-full">
+            <button className="text-white w-full bg-transparent ont-poppins backdrop-blur-sm p-4 border-2 md:w-2/12 md:hover:font-bold md:hover:scale-110 transition-all duration-300">
               Finne ut mer
             </button>
           </a>
