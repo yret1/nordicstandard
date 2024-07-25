@@ -20,14 +20,14 @@ export const links = [
     href: "/#visjon",
   },
   {
-    text: "Om Oss",
-    description: "Les om oss og vår historie. Se hvem som står bak selskapet!",
-    href: "/#om",
-  },
-  {
     text: "Tjenester",
     description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
     href: "/#services",
+  },
+  {
+    text: "Om Oss",
+    description: "Les om oss og vår historie. Se hvem som står bak selskapet!",
+    href: "/#om",
   },
   {
     text: "Kontakt",
@@ -36,6 +36,8 @@ export const links = [
   },
 ];
 const Header = () => {
+  const [scrollDistance, setScrollDistance] = useState<boolean>(false);
+
   const tooltipRef = useRef<HTMLDivElement>(null);
   interface TooltipPosition {
     top: number;
@@ -48,6 +50,22 @@ const Header = () => {
     position: {} as TooltipPosition,
   });
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrollDistance(true);
+      } else {
+        setScrollDistance(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   useEffect(() => {
     if (tooltip.show && tooltipRef.current) {
@@ -97,18 +115,44 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-screen h-12 z-20 flex-col gap-2 justify-center hidden md:flex items-center absolute top-0 left-0 bg-transparent  p-10">
-        <section className="pt-10">
-          <h1 className="font-bold text-4xl font-poppins text-center text-white">
+      <header className="w-screen h-12 z-20 fixed flex-col gap-2 justify-center hidden md:flex items-center top-0 left-0 bg-transparent  p-10">
+        <motion.section className="pt-10" layout>
+          <motion.h1
+            initial={{ opacity: 1, y: 0, display: "block" }}
+            animate={{
+              opacity: scrollDistance ? 0 : 1,
+              y: scrollDistance ? -50 : 0,
+              height: scrollDistance ? 0 : "auto",
+            }}
+            layout
+            className="font-bold text-4xl font-poppins text-center text-white"
+          >
             Nordisk Standard
-          </h1>
-        </section>
-        <section>
-          <ul className="w-full justify-center flex items-center gap-5">
+          </motion.h1>
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, height: "auto" }}
+          animate={{
+            backgroundColor: scrollDistance ? "white" : "transparent",
+            padding: scrollDistance ? "10px" : "0px",
+            height: "auto",
+            opacity: 1,
+            borderRadius: scrollDistance ? "10px" : "0px",
+            color: scrollDistance ? "black" : "white",
+            boxShadow: scrollDistance ? "0 0 10px rgba(0,0,0,0.1)" : "none",
+          }}
+          transition={{ duration: 0.4, ease: "linear" }}
+          layout
+        >
+          <motion.ul
+            layout
+            className="w-full justify-center flex items-center gap-5"
+          >
             {links.map((item, index) => (
               <a key={index} href={item.href}>
                 <li
-                  className="cursor-pointer text-[12px] md:text-lg text-nowrap text-white font-sans border-b-2 border-transparent hover:border-white transition-all"
+                  style={{ color: scrollDistance ? "black" : "white" }}
+                  className="cursor-pointer text-[12px] md:text-lg text-nowrap  font-sans border-b-2 border-transparent hover:border-white transition-all"
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -116,8 +160,8 @@ const Header = () => {
                 </li>
               </a>
             ))}
-          </ul>
-        </section>
+          </motion.ul>
+        </motion.section>
 
         <AnimatePresence>
           {tooltip.show && (
@@ -139,20 +183,45 @@ const Header = () => {
         </AnimatePresence>
       </header>
 
-      <header className="w-screen h-12 z-20 flex gap-5 justify-between md:hidden items-center absolute top-0 left-0 bg-transparent p-4">
+      <motion.header
+        initial={{ padding: scrollDistance ? 100 : 2 }}
+        className="w-screen h-12 z-20 flex gap-5 justify-between md:hidden items-center fixed top-0 left-0 bg-transparent"
+      >
         <section className="flex-1">
-          <h1 className="text-white font-poppins font-bold text-2xl">
-            Nordisk Standard
-          </h1>
+          <AnimatePresence>
+            <motion.h1
+              initial={{ opacity: 1, y: 0, display: "block" }}
+              animate={{
+                opacity: scrollDistance ? 0 : 1,
+                y: scrollDistance ? -50 : 0,
+                height: scrollDistance ? 0 : "auto",
+              }}
+              layout
+              className="text-white font-poppins font-bold text-2xl"
+            >
+              Nordisk Standard
+            </motion.h1>
+          </AnimatePresence>
         </section>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="z-50">
+        <motion.button
+          animate={{
+            padding: scrollDistance && !isOpen ? "6px" : "0px",
+            backgroundColor:
+              scrollDistance && !isOpen ? "black" : "transparent",
+            borderRadius: scrollDistance && !isOpen ? "10px" : "0px",
+            boxShadow:
+              scrollDistance && !isOpen ? "0 0 10px rgba(0,0,0,0.1)" : "none",
+          }}
+          onClick={() => setIsOpen(!isOpen)}
+          className="z-50"
+        >
           {isOpen ? (
             <img src={CloseIcon} alt="Close Icon" className="w-8 h-8" />
           ) : (
             <img src={MenuIcon} alt="Menu Icon" className="w-6 h-6" />
           )}
-        </button>
+        </motion.button>
 
         <AnimatePresence>
           {isOpen && (
@@ -200,7 +269,7 @@ const Header = () => {
             </motion.section>
           )}
         </AnimatePresence>
-      </header>
+      </motion.header>
     </>
   );
 };

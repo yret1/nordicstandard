@@ -7,7 +7,7 @@ const Socialproof = () => {
   useEffect(() => {
     const updateNumReviews = () => {
       if (window.innerWidth >= 1024) {
-        setNumReviews(9); // large screens
+        setNumReviews(6); // large screens
       } else if (window.innerWidth >= 768) {
         setNumReviews(6); // medium screens
       } else {
@@ -107,7 +107,7 @@ const Socialproof = () => {
         </span>{" "}
         say!
       </p>
-      <section className="w-screen py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
+      <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
         {reviews.slice(0, numReviews).map((review, index) => (
           <SocialCard
             key={index}
