@@ -15,7 +15,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
   review,
 }) => {
   return (
-    <article className="w-full h-full border-[1px] border-black shadow-lg rounded-lg p-4 md:p-6 lg:p-8 flex flex-col justify-start items-start">
+    <article className="w-full h-full border-[1px] border-black shadow-lg rounded-lg p-4 md:p-6 lg:p-8 flex bg-white flex-col justify-start items-start">
       <section className="w-full flex justify-start items-center gap-4">
         <div className="w-2/12 rounded-full overflow-hidden border-2 border-black">
           <img

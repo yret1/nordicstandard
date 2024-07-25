@@ -127,7 +127,7 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         <motion.a href={href} variants={itemVariants}>
-          <button className="py-2 px-4 border-[1px] border-black rounded-md hover:bg-green-200 transition-all duration-100">
+          <button className="py-2 px-4 border-[1px] border-black rounded-md bg-white shadow-lg hover:bg-green-200 transition-all duration-100">
             <p className="text-black font-medium text-2xl">{buttonText}</p>
           </button>
         </motion.a>

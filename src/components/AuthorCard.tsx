@@ -14,7 +14,7 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
   title,
 }) => {
   return (
-    <article className="w-full h-auto border-[1px] border-black rounded-md shadow-md">
+    <article className="w-full bg-white h-auto border-[1px] border-black rounded-md shadow-md">
       <figure className="w-full h-60 md:h-72 lg:h-96 overflow-hidden p-4">
         <img
           src={img}

@@ -1,3 +1,21 @@
+const GoalCard = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
+  return (
+    <section className="w-full md:border-2 md:p-4 rounded-md md:bg-white border-black flex md:h-full flex-col justify-start items-center">
+      <hr className="w-full block md:hidden" />
+      <div className="flex flex-col justify-start items-start gap-2 h-full pt-6 md:pt-0">
+        <p className="font-bold text-xl font-poppins text-black">{title}</p>
+        <p>{description}</p>
+      </div>
+    </section>
+  );
+};
+
 const Vision = () => {
   return (
     <section
@@ -13,50 +31,18 @@ const Vision = () => {
         </p>
 
         <section className="w-screen lg:w-8/12 flex flex-col justify-start items-start gap-5 p-6 md:flex-row ">
-          <section className="w-full md:border-2 md:p-4 rounded-md border-black flex flex-col justify-start items-center">
-            <hr className="w-full block md:hidden" />
-            <div className="flex flex-col justify-start items-start gap-2 pt-6 md:pt-0">
-              <p className="font-bold text-xl font-poppins text-black">
-                Our Goal
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
-                asperiores suscipit nulla vitae dicta doloribus, nostrum nobis
-                eaque similique sapiente ad rerum, error consequatur
-                consequuntur beatae sequi ducimus saepe ex.
-              </p>
-            </div>
-          </section>
-
-          <section className="w-full md:border-2 md:p-4 rounded-md border-black flex flex-col justify-start items-start">
-            <hr className="w-full block md:hidden" />
-            <div className="flex flex-col justify-start items-start gap-2 pt-6 md:pt-0">
-              <p className="font-bold text-xl font-poppins text-black">
-                Our Goal
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
-                asperiores suscipit nulla vitae dicta doloribus, nostrum nobis
-                eaque similique sapiente ad rerum, error consequatur
-                consequuntur beatae sequi ducimus saepe ex.
-              </p>
-            </div>
-          </section>
-
-          <section className="w-full md:border-2 md:p-4 rounded-md border-black flex flex-col justify-start items-center">
-            <hr className="w-full block md:hidden" />
-            <div className="flex flex-col justify-start items-start gap-2 pt-6 md:pt-0">
-              <p className="font-bold text-xl font-poppins text-black">
-                Our Goal
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
-                asperiores suscipit nulla vitae dicta doloribus, nostrum nobis
-                eaque similique sapiente ad rerum, error consequatur
-                consequuntur beatae sequi ducimus saepe ex.
-              </p>
-            </div>
-          </section>
+          <GoalCard
+            title="1. Simplify"
+            description="We make it easy to host your property without the hassle of managing it."
+          />
+          <GoalCard
+            title="2. Automate"
+            description="We automate the process of hosting your property so you can focus on other things."
+          />
+          <GoalCard
+            title="3. Maximize"
+            description="We help you maximize the value of your property by providing a great experience for your guests."
+          />
         </section>
       </section>
     </section>

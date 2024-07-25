@@ -118,12 +118,13 @@ const Header = () => {
       <header className="w-screen h-12 z-20 fixed flex-col gap-2 justify-center hidden md:flex items-center top-0 left-0 bg-transparent  p-10">
         <motion.section className="pt-10" layout>
           <motion.h1
-            initial={{ opacity: 1, y: 0, display: "block" }}
+            initial={{ opacity: 0, y: 0, display: "block" }}
             animate={{
               opacity: scrollDistance ? 0 : 1,
               y: scrollDistance ? -50 : 0,
               height: scrollDistance ? 0 : "auto",
             }}
+            transition={{ delay: 0.1 }}
             layout
             className="font-bold text-4xl font-poppins text-center text-white"
           >
@@ -141,7 +142,7 @@ const Header = () => {
             color: scrollDistance ? "black" : "white",
             boxShadow: scrollDistance ? "0 0 10px rgba(0,0,0,0.1)" : "none",
           }}
-          transition={{ duration: 0.4, ease: "linear" }}
+          transition={{ duration: 0.4, ease: "linear", delay: 0.1 }}
           layout
         >
           <motion.ul
@@ -171,7 +172,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className=" tooltip bg-black bg-opacity-45 text-white font-poppins p-2 rounded-md z-20"
+              className=" tooltip bg-black bg-opacity-65 text-white font-poppins p-2 rounded-md mt-px z-20"
               style={{
                 top: tooltip.position.top,
                 left: tooltip.position.left,
@@ -184,8 +185,8 @@ const Header = () => {
       </header>
 
       <motion.header
-        initial={{ padding: scrollDistance ? 100 : 2 }}
-        className="w-screen h-12 z-20 flex gap-5 justify-between md:hidden items-center fixed top-0 left-0 bg-transparent"
+        initial={{ padding: scrollDistance ? "100px" : "20px" }}
+        className="w-screen h-12 z-20 flex gap-5 justify-between md:hidden items-center fixed top-0 left-0 bg-transparent px-6"
       >
         <section className="flex-1">
           <AnimatePresence>
