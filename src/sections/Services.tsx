@@ -3,6 +3,8 @@ import Plane from "../assets/Plane.svg";
 import House from "../assets/House.svg";
 import Coin from "../assets/Coin.svg";
 import Chat from "../assets/Chat.svg";
+import GridContent from "../components/GridContent";
+import GridImg from "../components/GridImg";
 
 const Services = () => {
   return (
@@ -10,9 +12,20 @@ const Services = () => {
       id="services"
       className="w-full flex flex-col justify-center items-center p-4"
     >
-      <h3 className="text-black font-bold font-poppins text-xl md:text-2xl lg:text-3xl py-10">
-        Just some of the things we do!
-      </h3>
+      <section className="w-full flex flex-col gap-4 md:flex-row py-6 md:py-12 md:w-10/12 lg:w-8/12">
+        <GridImg img="https://images.unsplash.com/photo-1468930830753-6699377de411?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <GridContent
+          goal="Hvorvor Noridsk Standard"
+          desc="Vi håndterer din utleie for deg og optimerer leieinntektene dine. Våre boligpartners får økte leieinntekter Og mer fritid. Vår modell setter våre og våre parrnere sine interesser helt i linje."
+          title="Utleiepartner"
+          buttonText="Se tilbakemeldinger
+        fra våre boligpartnere lenge ned."
+          href="/#socialproof"
+        />
+      </section>
+      <section className="w-full flex justify-center">
+        <p></p>
+      </section>
       <section className="grid w-full md:w-10/12 lg:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2">
         <ServiceBox
           title="Booligpartner"

@@ -29,7 +29,7 @@ const Hero = () => {
             transition={{ delay: 0.2, ease: "anticipate" }}
             className="text-white text-center font-bold text-5xl font-poppins md:text-6xl lg:text-8xl md:drop-shadow-lg"
           >
-            Utleie partner
+            Din Utleiepartner
           </motion.h2>
           <motion.p
             layout
@@ -44,7 +44,7 @@ const Hero = () => {
             transition={{ delay: 0.3, ease: "anticipate" }}
             className="text-white font-medium text-center text-2xl md:text-4xl lg:text-4xl font-poppins"
           >
-            Slipp å tenke på utleie av din bolig. Vi tar oss av alt fra A-Ö.
+            Vi frigjør din viktigste resurs, din tid.
           </motion.p>
           <motion.a
             href="/#reach"

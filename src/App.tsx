@@ -17,13 +17,13 @@ function App() {
       <section className="w-screen overflow-x-hidden">
         <Header />
         <Hero />
+        <Services />
 
         <Reach />
 
         <Socialproof />
 
         <Stats />
-        <Services />
 
         <Vision />
 
