@@ -96,7 +96,10 @@ const GridContent: React.FC<GridContentProps> = ({
             variants={containerVariants}
           >
             {dataone && (
-              <motion.div className="opacity-100" variants={itemVariants}>
+              <motion.div
+                className="opacity-100 text-center"
+                variants={itemVariants}
+              >
                 <p className="font-bold text-blue-700 text-4xl">
                   {dataone.data}
                 </p>
@@ -106,7 +109,10 @@ const GridContent: React.FC<GridContentProps> = ({
               </motion.div>
             )}
             {datatwo && (
-              <motion.div className="opacity-100" variants={itemVariants}>
+              <motion.div
+                className="opacity-100 text-center"
+                variants={itemVariants}
+              >
                 <p className="font-bold text-blue-700 text-4xl">
                   {datatwo.data}
                 </p>

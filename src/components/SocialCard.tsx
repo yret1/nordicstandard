@@ -2,7 +2,7 @@ import Star from "../assets/Star.svg";
 
 interface SocialCardProps {
   name: string;
-  title: string;
+  title?: string;
   img: string;
   rating: number;
   review: string;

@@ -1,6 +1,7 @@
 import MenuIcon from "../assets/Menu.svg";
 import CloseIcon from "../assets/Cross.svg";
 import ArrowIcon from "../assets/Arrow.svg";
+import Contact from "../assets/Contact.svg";
 import { useEffect, useRef, useState } from "react";
 
 import "../index.css";
@@ -8,6 +9,11 @@ import "../index.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const links = [
+  {
+    text: "Tjenester",
+    description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
+    href: "/#services",
+  },
   {
     text: "Erfaring Og Meriter",
     description: "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
@@ -18,11 +24,6 @@ export const links = [
     description:
       "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
     href: "/#visjon",
-  },
-  {
-    text: "Tjenester",
-    description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
-    href: "/#services",
   },
   {
     text: "Om Oss",
@@ -271,6 +272,20 @@ const Header = () => {
           )}
         </AnimatePresence>
       </motion.header>
+      <motion.a
+        href="/#kontakt"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={
+          scrollDistance ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }
+        }
+        className="fixed w-20 h-20 hidden md:block cursor-pointer bg-blue-500 border-transparent bottom-10 rounded-full p-4 border-2 hover:border-black transition-all shadow-lg right-10 z-50"
+      >
+        <img
+          src={Contact}
+          alt="Contact icon"
+          className="w-full h-full object-contain"
+        />
+      </motion.a>
     </>
   );
 };
