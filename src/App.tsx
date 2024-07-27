@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import CookieConsent from "react-cookie-consent";
 import Hero from "./sections/Hero";
 import Kontakt from "./sections/Kontakt";
-import Reach from "./sections/Reach";
+
 import Services from "./sections/Services";
 import Stats from "./sections/Stats";
 
@@ -18,8 +18,6 @@ function App() {
         <Header />
         <Hero />
         <Services />
-
-        <Reach />
 
         <Socialproof />
 

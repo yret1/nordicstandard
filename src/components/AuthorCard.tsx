@@ -14,28 +14,34 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
   title,
 }) => {
   return (
-    <article className="w-full bg-white h-auto border-[1px] border-black rounded-md shadow-md">
-      <figure className="w-full h-60 md:h-72 lg:h-96 overflow-hidden p-4">
+    <article className="w-full bg-white h-auto border-[1px] border-slate-200 rounded-md shadow-md">
+      <figure className="w-full  overflow-hidden p-4">
         <img
           src={img}
           alt={`${name} profile image`}
-          className="h-full w-full object-cover object-center rounded-md"
+          className="h-full w-full object-cover aspect-square object-center rounded-md"
         />
       </figure>
-      <section className="w-full p-4 flex flex-col gap-4">
-        <p className="text-black font-bold font-poppins text-xl">{name}</p>
-        <p className="text-blue-700 font-medium font-poppins text-lg">
+      <section className="w-full p-4 lg:p-6 flex flex-col gap-4">
+        <p className="text-black font-bold font-poppins text-xl lg:text-2xl">
+          {name}
+        </p>
+        <p className="text-blue-700 font-medium font-poppins text-lg lg:text-2xl">
           {title}
         </p>
 
         <section>
-          <p className="text-black font-sans text-lg font-bold">Background</p>
-          <p>{background}</p>
+          <p className="text-black font-sans text-lg lg:text-xl font-bold">
+            Background
+          </p>
+          <p className="text-black text-sm lg:text-lg">{background}</p>
         </section>
 
         <section>
-          <p className="text-black font-sans text-lg font-bold">About</p>
-          <p>{about}</p>
+          <p className="text-black font-sans text-lg lg:text-xl font-bold">
+            About
+          </p>
+          <p className="text-black text-sm lg:text-lg">{about}</p>
         </section>
       </section>
     </article>

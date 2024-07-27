@@ -19,7 +19,7 @@ const GoalCard = ({
 const Vision = () => {
   return (
     <section
-      id="vision"
+      id="visjon"
       className="w-screen flex justify-center items-center p-6"
     >
       <section className="w-screen flex flex-col justify-center items-center">

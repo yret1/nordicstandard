@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="w-screen h-screen bg-[url('./assets/NorwayDesktop.png')] bg-cover">
+    <section
+      id="home"
+      className="w-screen h-screen bg-[url('./assets/NorwayDesktop.png')] bg-cover"
+    >
       <video
         autoPlay
         controls={false}

@@ -33,17 +33,17 @@ const Services = () => {
         <ServiceBox
           title="Korttidsutleie
 "
-          description="Let us handle the hard work of managing your property. We take care of everything! Enjoy an increase in bookings and reap the rewards!"
+          description="La oss håndtere det harde arbeidet med å administrere din eiendom. Vi tar oss av alt! Nyt en økning i bestillinger og høst fruktene!"
           img={House}
         />
         <ServiceBox
           title="Langtidsutleie"
-          description="We cover all of Norway, no matter where your property is located. We have a solution for you!"
+          description="Vi dekker hele Norge, uansett hvor din eiendom ligger. Vi har en løsning for deg!"
           img={Plane}
         />
         <ServiceBox
           title="Kombinasjonsutleie"
-          description="Industry leading low fees of only x.x %. We only make money when you do!"
+          description="Ikke sikker på om langsiktig og kortsiktig vil være best for deg? Vi en tilbudskombinasjon"
           img={Coin}
         />
       </section>
