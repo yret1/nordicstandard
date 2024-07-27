@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import CookieConsent from "react-cookie-consent";
 import Hero from "./sections/Hero";
 import Kontakt from "./sections/Kontakt";
-import Reach from "./sections/Reach";
+
 import Services from "./sections/Services";
 import Stats from "./sections/Stats";
 
@@ -17,13 +17,11 @@ function App() {
       <section className="w-screen overflow-x-hidden">
         <Header />
         <Hero />
-
-        <Reach />
+        <Services />
 
         <Socialproof />
 
         <Stats />
-        <Services />
 
         <Vision />
 

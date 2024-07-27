@@ -96,7 +96,10 @@ const GridContent: React.FC<GridContentProps> = ({
             variants={containerVariants}
           >
             {dataone && (
-              <motion.div className="opacity-100" variants={itemVariants}>
+              <motion.div
+                className="opacity-100 text-center"
+                variants={itemVariants}
+              >
                 <p className="font-bold text-blue-700 text-4xl">
                   {dataone.data}
                 </p>
@@ -106,7 +109,10 @@ const GridContent: React.FC<GridContentProps> = ({
               </motion.div>
             )}
             {datatwo && (
-              <motion.div className="opacity-100" variants={itemVariants}>
+              <motion.div
+                className="opacity-100 text-center"
+                variants={itemVariants}
+              >
                 <p className="font-bold text-blue-700 text-4xl">
                   {datatwo.data}
                 </p>
@@ -127,8 +133,8 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         <motion.a href={href} variants={itemVariants}>
-          <button className="py-2 px-4 border-[1px] border-black rounded-md bg-white shadow-lg hover:bg-green-200 transition-all duration-100">
-            <p className="text-black font-medium text-2xl">{buttonText}</p>
+          <button className="py-2 px-4  rounded-md bg-white border-[1px] border-black shadow-lg hover:bg-blue-700 hover:text-white text-black transition-all duration-100">
+            <p className=" font-medium text-2xl">{buttonText}</p>
           </button>
         </motion.a>
       </motion.section>

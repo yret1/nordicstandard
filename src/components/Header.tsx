@@ -1,6 +1,7 @@
 import MenuIcon from "../assets/Menu.svg";
 import CloseIcon from "../assets/Cross.svg";
 import ArrowIcon from "../assets/Arrow.svg";
+import Contact from "../assets/Contact.svg";
 import { useEffect, useRef, useState } from "react";
 
 import "../index.css";
@@ -8,6 +9,11 @@ import "../index.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const links = [
+  {
+    text: "Tjenester",
+    description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
+    href: "/#services",
+  },
   {
     text: "Erfaring Og Meriter",
     description: "Se våre meriter og erfaring. Våre kunder er veldig fornøyde!",
@@ -18,11 +24,6 @@ export const links = [
     description:
       "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
     href: "/#visjon",
-  },
-  {
-    text: "Tjenester",
-    description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
-    href: "/#services",
   },
   {
     text: "Om Oss",
@@ -38,6 +39,75 @@ export const links = [
 const Header = () => {
   const [scrollDistance, setScrollDistance] = useState<boolean>(false);
 
+  const [currentSection, setCurrentSection] = useState<string>("");
+
+  const sections = [
+    "tjenester",
+    "erfaring og meriter",
+    "visjon",
+    "om oss",
+    "kontakt",
+    "home",
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrollDistance(true);
+      } else {
+        setScrollDistance(false);
+      }
+    };
+    const checkCurrentSection = () => {
+      let id = "";
+      sections.forEach((section) => {
+        switch (section) {
+          case "tjenester":
+            id = "services";
+            break;
+          case "erfaring og meriter":
+            id = "meriter";
+            break;
+          case "visjon":
+            id = "visjon";
+            break;
+          case "om oss":
+            id = "om";
+            break;
+          case "kontakt":
+            id = "kontakt";
+            break;
+          case "home":
+            id = "home";
+            break;
+          default:
+            break;
+        }
+
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (
+            rect.top < window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 4
+          ) {
+            setCurrentSection(section + "-link");
+          } else {
+            return;
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", checkCurrentSection);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkCurrentSection);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   const tooltipRef = useRef<HTMLDivElement>(null);
   interface TooltipPosition {
     top: number;
@@ -50,22 +120,6 @@ const Header = () => {
     position: {} as TooltipPosition,
   });
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrollDistance(true);
-      } else {
-        setScrollDistance(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 
   useEffect(() => {
     if (tooltip.show && tooltipRef.current) {
@@ -138,7 +192,7 @@ const Header = () => {
             padding: scrollDistance ? "10px" : "0px",
             height: "auto",
             opacity: 1,
-            borderRadius: scrollDistance ? "10px" : "0px",
+            borderRadius: scrollDistance ? "25px" : "0px",
             color: scrollDistance ? "black" : "white",
             boxShadow: scrollDistance ? "0 0 10px rgba(0,0,0,0.1)" : "none",
           }}
@@ -152,8 +206,12 @@ const Header = () => {
             {links.map((item, index) => (
               <a key={index} href={item.href}>
                 <li
-                  style={{ color: scrollDistance ? "black" : "white" }}
-                  className="cursor-pointer text-[12px] md:text-lg text-nowrap  font-sans border-b-2 border-transparent hover:border-white transition-all"
+                  id={item.text.toLowerCase() + "-link"}
+                  className={`cursor-pointer text-[12px] md:text-lg text-nowrap transition-all duration-200 p-2 rounded-full border-2 hover:bg-slate-100 ${
+                    currentSection == item.text.toLowerCase() + "-link"
+                      ? "border-black"
+                      : "border-transparent"
+                  } transition-all font-sans `}
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -271,6 +329,20 @@ const Header = () => {
           )}
         </AnimatePresence>
       </motion.header>
+      <motion.a
+        href="/#kontakt"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={
+          scrollDistance ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }
+        }
+        className="fixed w-20 h-20 hidden md:block cursor-pointer bg-blue-500 border-transparent bottom-10 rounded-full p-4 border-2 hover:border-black transition-all shadow-lg right-10 z-50"
+      >
+        <img
+          src={Contact}
+          alt="Contact icon"
+          className="w-full h-full object-contain"
+        />
+      </motion.a>
     </>
   );
 };
