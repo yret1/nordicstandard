@@ -154,7 +154,7 @@ const Header = () => {
               <a key={index} href={item.href}>
                 <li
                   style={{ color: scrollDistance ? "black" : "white" }}
-                  className="cursor-pointer text-[12px] md:text-lg text-nowrap  font-sans border-b-2 border-transparent hover:border-white transition-all"
+                  className="cursor-pointer text-[12px] md:text-lg text-nowrap p-2 rounded-full border-2 boredr-transparent hover:border-black transition-all font-sans border-b-2 border-transparent hover:border-white "
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
                 >
