@@ -25,14 +25,6 @@ const Socialproof = () => {
 
   const reviewsGuests = [
     {
-      name: "Sigrid Nilsen",
-      rating: 5,
-
-      img: "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      review:
-        "Fantastisk opphold! Leiligheten var ren og koselig, og verten var utrolig hjelpsom. Beliggenheten var også perfekt, med gangavstand til alle de viktigste attraksjonene. Kommer definitivt tilbake!",
-    },
-    {
       name: "Morten Larsen",
       rating: 5,
 
@@ -59,14 +51,6 @@ const Socialproof = () => {
   ];
 
   const reviews = [
-    {
-      name: "Ola Nordmann",
-      title: "CEO",
-      img: "https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      rating: 5,
-      review:
-        "Nordisk Standard har gjort en strålende jobb med å forvalte eiendommen vår. Profesjonell håndtering og utmerket kundeservice har gjort hele prosessen enkel og bekymringsfri. Anbefales på det sterkeste!",
-    },
     {
       name: "Lise Hansen",
       title: "CEO",
@@ -98,10 +82,10 @@ const Socialproof = () => {
       className="w-screen flex flex-col justify-center items-center pb-12"
     >
       <Reach />
-      <p className="text-blue-700 font-poppins font-medium py-10 md:text-xl text-lg lg:text-5xl">
+      <p className="text-blue-700 font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre partnere sier!
       </p>
-      <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
+      <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
         {reviews.slice(0, numReviews).map((review, index) => (
           <SocialCard
             key={index}
@@ -114,10 +98,10 @@ const Socialproof = () => {
         ))}
       </section>
 
-      <p className="text-blue-700 font-poppins font-medium py-10 md:text-xl text-lg lg:text-5xl">
+      <p className="text-blue-700 font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre gjester sier!
       </p>
-      <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
+      <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
         {reviewsGuests.slice(0, numReviews).map((review, index) => (
           <SocialCard
             key={index}

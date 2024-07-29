@@ -3,7 +3,7 @@ import { useState } from "react";
 const Kontakt = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const [result, setResult] = useState("Send Message");
+  const [result, setResult] = useState("Sende melding");
   const [sent, setSent] = useState(false);
   const [mail, setMail] = useState({
     name: "",
@@ -19,7 +19,7 @@ const Kontakt = () => {
       setResult("Please fill in all fields");
 
       setTimeout(() => {
-        setResult("Send Message");
+        setResult("Sende melding");
       });
     } else setSubmitting(true);
 
@@ -37,7 +37,7 @@ const Kontakt = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Message Sent");
+      setResult("Melding sendt");
       setMail({
         name: "",
         phone: "",
@@ -49,7 +49,7 @@ const Kontakt = () => {
       setSent(true);
 
       setTimeout(() => {
-        setResult("Send Message");
+        setResult("Sende melding");
       }, 2000);
     } else {
       console.log("Error", data);
@@ -64,23 +64,22 @@ const Kontakt = () => {
     >
       <section className="w-full md:w-5/12 pt-10 md:py-20 flex flex-col justify-start items-start">
         <p className="text-black text-opacity-35 font-light font-poppins pb-4">
-          Contact us
+          Kontakt oss
         </p>
         <hr className="w-full border-blue-400" />
         <p className="text-blue-500 text-4xl font-poppins pt-10">
-          Let's talk anywhere you are.
+          Bli våran boligparnet
         </p>
       </section>
 
       <section className="w-full md:w-5/12 py-20 flex flex-col justify-start items-start">
         <p className="text-black text-opacity-35 font-light font-poppins pb-4">
-          Request Information
+          Din informasjon
         </p>
         <hr className="w-full border-blue-400" />
 
         <p className="text-black text-opacity-55 font-poppins font-medium font-2xl pt-10">
-          Whether looking for more information or ready to partner with us,
-          we're here to guide you through every step of the process.
+          Klar for neste trinn? Ta kontakt med oss for å diskutere din bolig.
         </p>
 
         <form className="w-full" onSubmit={(e) => onSubmit(e)}>
@@ -90,7 +89,7 @@ const Kontakt = () => {
                 htmlFor="name"
                 className="text-black font-poppins font-medium pb-4"
               >
-                Name*
+                Navn*
               </label>
               <input
                 required
@@ -99,7 +98,7 @@ const Kontakt = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Full Name"
+                placeholder="Fullt navn"
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               />
             </section>
@@ -108,7 +107,7 @@ const Kontakt = () => {
                 htmlFor="tel"
                 className="text-black font-poppins font-medium pb-4"
               >
-                Telephone Number
+                Tel
               </label>
               <input
                 onChange={(e) => setMail({ ...mail, phone: e.target.value })}
@@ -128,7 +127,7 @@ const Kontakt = () => {
                 htmlFor="email"
                 className="text-black font-poppins font-medium pb-4"
               >
-                Email*
+                E-post*
               </label>
               <input
                 onChange={(e) => setMail({ ...mail, email: e.target.value })}
@@ -137,7 +136,7 @@ const Kontakt = () => {
                 required
                 id="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder="e-post"
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               />
             </section>
@@ -149,7 +148,7 @@ const Kontakt = () => {
                 htmlFor="email"
                 className="text-black font-poppins font-medium pb-4"
               >
-                Your message*
+                Din beskjed*
               </label>
               <textarea
                 required
@@ -157,7 +156,7 @@ const Kontakt = () => {
                 value={mail.message}
                 id="message"
                 name="message"
-                placeholder="What can we do for you?"
+                placeholder="Hva kan vi gjøre for deg?"
                 cols={60}
                 className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
               />
@@ -170,9 +169,9 @@ const Kontakt = () => {
                 type="submit"
                 className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-100 text-2xl font-medium text-white"
               >
-                {submitting && <p>Sending...</p>}
+                {submitting && <p>Sender...</p>}
                 {!submitting && result && <p>{result}</p>}
-                {!submitting && !result && !sent && <p>Send Message</p>}
+                {!submitting && !result && !sent && <p>Sende melding</p>}
               </button>
             </section>
           </fieldset>

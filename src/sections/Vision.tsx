@@ -30,18 +30,20 @@ const Vision = () => {
           So we changed that.
         </p>
 
-        <section className="w-screen lg:w-8/12 flex flex-col justify-start items-start gap-5 p-6 md:flex-row ">
+        <section className="w-screen lg:w-8/12 grid grid-cols-1 md:grid-cols-3 gap-5 p-6 md:flex-row ">
           <GoalCard
-            title="1. Simplify"
-            description="We make it easy to host your property without the hassle of managing it."
+            title="Samarbeid"
+            description="Hos Nordisk Standard er vårt hovedfokus å samarbeide tett med deg som partner for å optimere ditt boende. Vi bygger et nettverk av fagpersoner som kan håndtere alle boligrelaterte utfordringer og forbedre hjemmet ditt etter dine ønsker.
+"
           />
           <GoalCard
-            title="2. Automate"
-            description="We automate the process of hosting your property so you can focus on other things."
+            title="Service"
+            description="Vi leverer førsteklasses service og profesjonalitet, og vi lytter alltid til dine tilbakemeldinger for å forbedre oss. Vårt mål er også at alle som besøker Oslo skal få en fantastisk opplevelse av byen vi elsker.
+"
           />
           <GoalCard
-            title="3. Maximize"
-            description="We help you maximize the value of your property by providing a great experience for your guests."
+            title="Trygt"
+            description="Gjennom samarbeid, optimalisering og et pålitelig fagnettverk, jobber vi for å gjøre ditt hjem best mulig."
           />
         </section>
       </section>

@@ -1,9 +1,9 @@
 interface AuthorCardProps {
   name: string;
-  title: string;
+  title?: string;
   img: string;
-  about: string;
-  background: string;
+  about?: string;
+  background?: string;
 }
 
 const AuthorCard: React.FC<AuthorCardProps> = ({
@@ -30,19 +30,23 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
           {title}
         </p>
 
-        <section>
-          <p className="text-black font-sans text-lg lg:text-xl font-bold">
-            Background
-          </p>
-          <p className="text-black text-sm lg:text-lg">{background}</p>
-        </section>
+        {background && (
+          <section>
+            <p className="text-black font-sans text-lg lg:text-xl font-bold">
+              Background
+            </p>
+            <p className="text-black text-sm lg:text-lg">{background}</p>
+          </section>
+        )}
 
-        <section>
-          <p className="text-black font-sans text-lg lg:text-xl font-bold">
-            About
-          </p>
-          <p className="text-black text-sm lg:text-lg">{about}</p>
-        </section>
+        {about && (
+          <section>
+            <p className="text-black font-sans text-lg lg:text-xl font-bold">
+              About
+            </p>
+            <p className="text-black text-sm lg:text-lg">{about}</p>
+          </section>
+        )}
       </section>
     </article>
   );
