@@ -212,10 +212,10 @@ const Header = () => {
               <a key={index} href={item.href}>
                 <li
                   id={item.text.toLowerCase() + "-link"}
-                  className={`cursor-pointer text-[12px] md:text-lg text-nowrap transition-all duration-200 p-2 rounded-full border-2 hover:bg-slate-100 ${
+                  className={`cursor-pointer text-[12px] md:text-lg text-nowrap transition-all duration-200 p-2 rounded-full border-2  ${
                     currentSection == item.text.toLowerCase() + "-link"
-                      ? "border-black bg-white"
-                      : "border-transparent bg-transparent"
+                      ? "border-black bg-white hover:border-slate-200"
+                      : "border-transparent bg-transparent hover:border-white"
                   } transition-all font-sans `}
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
