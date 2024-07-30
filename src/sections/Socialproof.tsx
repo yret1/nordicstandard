@@ -104,7 +104,7 @@ const Socialproof = () => {
       <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
         {reviewsGuests.slice(0, numReviews).map((review, index) => (
           <SocialCard
-            key={index}
+            key={index + review.name}
             name={review.name}
             img={review.img}
             rating={review.rating}

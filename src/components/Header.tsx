@@ -180,7 +180,7 @@ const Header = () => {
             }}
             transition={{ delay: 0.1 }}
             layout
-            className="font-bold text-4xl font-poppins text-center text-white"
+            className="font-bold text-4xl font-comorant text-center text-white"
           >
             Nordisk Standard
           </motion.h1>
@@ -209,8 +209,8 @@ const Header = () => {
                   id={item.text.toLowerCase() + "-link"}
                   className={`cursor-pointer text-[12px] md:text-lg text-nowrap transition-all duration-200 p-2 rounded-full border-2 hover:bg-slate-100 ${
                     currentSection == item.text.toLowerCase() + "-link"
-                      ? "border-black"
-                      : "border-transparent"
+                      ? "border-black bg-white"
+                      : "border-transparent bg-transparent"
                   } transition-all font-sans `}
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
@@ -256,7 +256,7 @@ const Header = () => {
                 height: scrollDistance ? 0 : "auto",
               }}
               layout
-              className="text-white font-poppins font-bold text-2xl"
+              className="text-white font-comorant font-bold text-2xl"
             >
               Nordisk Standard
             </motion.h1>

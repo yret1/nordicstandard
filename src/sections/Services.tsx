@@ -17,9 +17,9 @@ const Services = () => {
           pos="object-center"
         />
         <GridContent
-          goal="Hvorvor Noridsk Standard"
+          goal="Tjenester"
           desc="Vi håndterer din utleie for deg og optimerer leieinntektene dine. Våre boligpartners får økte leieinntekter Og mer fritid. Vår modell setter våre og våre parrnere sine interesser helt i linje."
-          title="Utleiepartner"
+          title="Hva tilbyr vi?"
           buttonText="Hva tilbyr vi?"
           href="/#services"
           dataone={{ data: "Högere leieinntekter", value: "20%" }}

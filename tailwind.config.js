@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        comorant: ["Cormorant SC", "serif"],
       },
       backgroundImage: {
         topWave: "url('./assets/ErfaringWave.svg')",

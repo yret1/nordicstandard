@@ -32,7 +32,12 @@ const SocialCard: React.FC<SocialCardProps> = ({
 
       <section className="w-screen flex justify-start items-center py-2 gap-2">
         {[...Array(rating)].map((_, index) => (
-          <img src={Star} alt={`Rating star ${index}`} className="h-6 w-6" />
+          <img
+            src={Star}
+            alt={`Rating star ${index}`}
+            key={"star key" + index}
+            className="h-6 w-6"
+          />
         ))}
       </section>
 

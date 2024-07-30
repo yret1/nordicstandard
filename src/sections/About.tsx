@@ -31,7 +31,11 @@ const About = () => {
       </p>
       <section className="w-11/12 md:w-10/12 lg:w-8/12 gap-4 md:gap-6 lg:gap-10 grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
         {Profiles.map((profile, index) => (
-          <AuthorCard key={index} name={profile.name} img={profile.img} />
+          <AuthorCard
+            key={profile.name + index}
+            name={profile.name}
+            img={profile.img}
+          />
         ))}
       </section>
     </section>
