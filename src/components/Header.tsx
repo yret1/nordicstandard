@@ -3,10 +3,12 @@ import CloseIcon from "../assets/Cross.svg";
 import ArrowIcon from "../assets/Arrow.svg";
 import Contact from "../assets/Contact.svg";
 import { useEffect, useRef, useState } from "react";
+// Remove the import statement
 
 import "../index.css";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { debounce } from "framer/render/utils/debounce.js";
 
 export const links = [
   {
@@ -38,7 +40,7 @@ export const links = [
 ];
 const Header = () => {
   const [scrollDistance, setScrollDistance] = useState<boolean>(false);
-
+  const scrollTimeout = useRef<number | null>(null);
   const [currentSection, setCurrentSection] = useState<string>("");
 
   const sections = [
@@ -51,14 +53,21 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
+    const handleScroll = debounce(() => {
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+
+      const scrollY = window.scrollY;
+
+      // Handle scroll distance state
+      if (scrollY > 100) {
         setScrollDistance(true);
       } else {
         setScrollDistance(false);
       }
-    };
-    const checkCurrentSection = () => {
+
+      // Handle current section detection
       let id = "";
       sections.forEach((section) => {
         switch (section) {
@@ -92,21 +101,17 @@ const Header = () => {
             rect.bottom >= window.innerHeight / 4
           ) {
             setCurrentSection(section + "-link");
-          } else {
-            return;
           }
         }
       });
-    };
+    }, 50); // Adjust the debounce delay as needed
 
-    window.addEventListener("scroll", checkCurrentSection);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", checkCurrentSection);
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
 
   const tooltipRef = useRef<HTMLDivElement>(null);
   interface TooltipPosition {
