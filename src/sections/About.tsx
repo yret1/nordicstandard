@@ -26,7 +26,7 @@ const About = () => {
       id="om"
       className="w-screen flex flex-col justify-center items-center pb-12"
     >
-      <p className="font-bold font-poppins text-blue-700 text-2xl md:text-3xl lg:text-5xl py-6">
+      <p className="font-bold font-poppins text-accent text-2xl md:text-3xl lg:text-5xl py-6">
         Bak selskapet
       </p>
       <section className="w-11/12 md:w-10/12 lg:w-8/12 gap-4 md:gap-6 lg:gap-10 grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">

@@ -82,7 +82,7 @@ const Socialproof = () => {
       className="w-screen flex flex-col justify-center items-center pb-12"
     >
       <Reach />
-      <p className="text-blue-700 font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
+      <p className="text-accent font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre partnere sier!
       </p>
       <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
@@ -98,7 +98,7 @@ const Socialproof = () => {
         ))}
       </section>
 
-      <p className="text-blue-700 font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
+      <p className="text-accent font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre gjester sier!
       </p>
       <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">

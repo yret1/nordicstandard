@@ -6,11 +6,11 @@ const GoalCard = ({
   description: string;
 }) => {
   return (
-    <section className="w-full md:border-2 md:p-4 rounded-md md:bg-white border-black flex md:h-full flex-col justify-start items-center">
+    <section className="w-full md:border-2 md:p-4 rounded-md md:bg-cardbg border-borders  flex md:h-full flex-col justify-start items-center">
       <hr className="w-full block md:hidden" />
       <div className="flex flex-col justify-start items-start gap-2 h-full pt-6 md:pt-0">
-        <p className="font-bold text-xl font-poppins text-black">{title}</p>
-        <p>{description}</p>
+        <p className="font-bold text-xl font-poppins text-head">{title}</p>
+        <p className="text-sub">{description}</p>
       </div>
     </section>
   );
@@ -23,11 +23,8 @@ const Vision = () => {
       className="w-screen flex justify-center items-center p-6"
     >
       <section className="w-screen flex flex-col justify-center items-center">
-        <p className="font-poppins underline text-black font-bold text-xl text-center md:text-3xl lg:text-6xl">
-          Hosting stays shouldn't be difficult
-        </p>
-        <p className="font-poppins underline text-blue-700 font-bold text-2xl text-center md:text-4xl lg:text-7xl pb-12 md:pb-20">
-          So we changed that.
+        <p className="font-poppins py-12 text-accent font-bold text-2xl text-center md:text-4xl lg:text-7xl pb-12 md:pb-20">
+          NS Visjon
         </p>
 
         <section className="w-screen lg:w-8/12 grid grid-cols-1 md:grid-cols-3 gap-5 p-6 md:flex-row ">

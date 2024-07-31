@@ -15,7 +15,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
   review,
 }) => {
   return (
-    <article className="w-full h-full border-[1px] border-slate-200 shadow-lg rounded-lg p-4 md:p-6 lg:p-8 flex bg-white flex-col justify-start items-start">
+    <article className="w-full h-full border-[1px] border-slate-200 shadow-lg rounded-lg p-4 md:p-6 lg:p-8 flex bg-cardbg flex-col justify-start items-start">
       <section className="w-full flex justify-start items-center gap-4">
         <div className="w-2/12 rounded-full overflow-hidden border-2 border-slate-200 shadow-md">
           <img
@@ -25,7 +25,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
           />
         </div>
 
-        <p className="font-bold text-black text-sm md:text-lg lg:text-2xl">
+        <p className="font-bold text-head text-sm md:text-lg lg:text-2xl">
           {name}
         </p>
       </section>
@@ -42,7 +42,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
       </section>
 
       <section className="w-full flex justify-start items-center py-2 gap-2">
-        <p className="font-normal text-black text-wrap text-lg">{review}</p>
+        <p className="font-normal text-sub text-wrap text-lg">{review}</p>
       </section>
     </article>
   );

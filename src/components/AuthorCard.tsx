@@ -14,7 +14,7 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
   title,
 }) => {
   return (
-    <article className="w-full bg-white h-auto border-[1px] border-slate-200 rounded-md shadow-md">
+    <article className="w-full bg-cardbg h-auto border-[1px] border-slate-200 rounded-md shadow-md">
       <figure className="w-full  overflow-hidden p-4">
         <img
           src={img}
@@ -23,28 +23,28 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
         />
       </figure>
       <section className="w-full p-4 lg:p-6 flex flex-col gap-4">
-        <p className="text-black font-bold font-poppins text-xl lg:text-2xl">
+        <p className="text-Head font-bold font-poppins text-xl lg:text-2xl">
           {name}
         </p>
-        <p className="text-blue-700 font-medium font-poppins text-lg lg:text-2xl">
+        <p className="text-accent font-medium font-poppins text-lg lg:text-2xl">
           {title}
         </p>
 
         {background && (
           <section>
-            <p className="text-black font-sans text-lg lg:text-xl font-bold">
+            <p className="text-head font-sans text-lg lg:text-xl font-bold">
               Background
             </p>
-            <p className="text-black text-sm lg:text-lg">{background}</p>
+            <p className="text-sub text-sm lg:text-lg">{background}</p>
           </section>
         )}
 
         {about && (
           <section>
-            <p className="text-black font-sans text-lg lg:text-xl font-bold">
+            <p className="text-head font-sans text-lg lg:text-xl font-bold">
               About
             </p>
-            <p className="text-black text-sm lg:text-lg">{about}</p>
+            <p className="text-sub text-sm lg:text-lg">{about}</p>
           </section>
         )}
       </section>

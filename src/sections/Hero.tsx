@@ -31,7 +31,7 @@ const Hero = () => {
               y: 0,
             }}
             transition={{ delay: 0.2, ease: "anticipate" }}
-            className="text-white text-center font-bold text-4xl font-poppins md:text-5xl lg:text-6xl md:drop-shadow-lg"
+            className="text-herohead text-center font-bold text-4xl font-poppins md:text-5xl lg:text-6xl md:drop-shadow-lg"
           >
             Din Utleiepartner
           </motion.h2>
@@ -46,13 +46,13 @@ const Hero = () => {
               y: 0,
             }}
             transition={{ delay: 0.3, ease: "anticipate" }}
-            className="text-white font-medium text-center text-lg md:text-xl lg:text-2xl font-poppins"
+            className="text-herosub font-medium text-center text-lg md:text-xl lg:text-2xl font-poppins"
           >
             Vi frigjør din viktigste resurs, din tid.
           </motion.p>
           <motion.a
             href="/#reach"
-            className="w-full flex justify-center text-white absolute p-4  bottom-8 animate-bounce items-center md:mt-8"
+            className="w-full flex justify-center text-herosub absolute p-4  bottom-8 animate-bounce items-center md:mt-8"
           >
             <section className="w-12 h-12 md:w-16 md:h-16 flex justify-center items-center group bg-transparent rounded-full hover:bg-white transition-all">
               <img

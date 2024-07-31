@@ -340,7 +340,7 @@ const Header = () => {
         animate={
           scrollDistance ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }
         }
-        className="fixed w-20 h-20  cursor-pointer bg-blue-500 border-transparent bottom-10 rounded-full p-4 border-2 hover:border-black transition-all shadow-lg right-10 z-50"
+        className="fixed w-20 h-20  cursor-pointer bg-contact border-transparent bottom-10 rounded-full p-4 border-2 hover:border-black transition-all shadow-lg right-10 z-50"
       >
         <img
           src={Contact}

@@ -3,22 +3,24 @@ import { links } from "../components/Header";
 const Footer = () => {
   return (
     <section className="w-screen shadow-inner">
-      <section className="flex w-full justify-between flex-col bg-blue-700">
+      <section className="flex w-full justify-between flex-col bg-accent">
         <section className="flex flex-col md:flex-row">
           <section className="flex flex-col justify-start items-start text-left w-full p-4">
-            <p className="text-white font-bold font-poppins text-2xl">
+            <p className="text-herohead font-bold font-poppins text-2xl">
               Nordisk Standard
               <br />
-              <span className="text-lg font-normal">Din Airbnb Partner</span>
+              <span className="text-lg font-normal text-herohead">
+                Din Airbnb Partner
+              </span>
             </p>
-            <p className="text-white font-normal font-poppins text-opacity-45">
+            <p className="text-herosub font-normal font-poppins text-opacity-45">
               Maridalsveien 39 A <br />
               0175 Oslo
             </p>
           </section>
 
           <section className="w-full p-4 flex flex-col gap-2">
-            <p className="font-bold text-white text-lg">Navigate</p>
+            <p className="font-bold text-herohead text-lg">Navigate</p>
             <ul className="flex flex-col gap-2 justify-start items-start md:flex-row">
               {links.map((item, index) => (
                 <a key={index} href={item.href}>
@@ -30,18 +32,18 @@ const Footer = () => {
             </ul>
 
             <section>
-              <p className="font-bold text-white text-lg">Socials</p>
+              <p className="font-bold text-herohead text-lg">Socials</p>
               <ul className="flex flex-col gap-2 justify-start items-start md:flex-row">
-                <li className="text-white font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
+                <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
                   Airbnb
                 </li>
-                <li className="text-white font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
+                <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
                   Airbnb
                 </li>
-                <li className="text-white font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
+                <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
                   Airbnb
                 </li>
-                <li className="text-white font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
+                <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
                   Airbnb
                 </li>
               </ul>

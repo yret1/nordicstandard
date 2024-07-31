@@ -66,19 +66,19 @@ const Kontakt = () => {
         <p className="text-black text-opacity-35 font-light font-poppins pb-4">
           Kontakt oss
         </p>
-        <hr className="w-full border-blue-400" />
-        <p className="text-blue-500 text-4xl font-poppins pt-10">
+        <hr className="w-full border-accent" />
+        <p className="text-accent text-4xl font-poppins pt-10">
           Bli våran boligparnet
         </p>
       </section>
 
       <section className="w-full md:w-5/12 py-20 flex flex-col justify-start items-start">
-        <p className="text-black text-opacity-35 font-light font-poppins pb-4">
+        <p className="text-optext text-opacity-35 font-light font-poppins pb-4">
           Din informasjon
         </p>
-        <hr className="w-full border-blue-400" />
+        <hr className="w-full border-accent" />
 
-        <p className="text-black text-opacity-55 font-poppins font-medium font-2xl pt-10">
+        <p className="text-optext text-opacity-55 font-poppins font-medium font-2xl pt-10">
           Klar for neste trinn? Ta kontakt med oss for å diskutere din bolig.
         </p>
 
@@ -99,7 +99,7 @@ const Kontakt = () => {
                 id="name"
                 name="name"
                 placeholder="Fullt navn"
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
+                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
             <section className="w-full">
@@ -116,7 +116,7 @@ const Kontakt = () => {
                 id="tel"
                 name="tel"
                 placeholder="+12 345 678"
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
+                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
           </fieldset>
@@ -137,7 +137,7 @@ const Kontakt = () => {
                 id="email"
                 name="email"
                 placeholder="e-post"
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
+                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
           </fieldset>
@@ -158,7 +158,7 @@ const Kontakt = () => {
                 name="message"
                 placeholder="Hva kan vi gjøre for deg?"
                 cols={60}
-                className="w-full p-4 border-[1px] border-slate-200 rounded-md active:border-blue-600"
+                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
           </fieldset>
@@ -167,7 +167,7 @@ const Kontakt = () => {
             <section className="w-full">
               <button
                 type="submit"
-                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-100 text-2xl font-medium text-white"
+                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-poopgreen border-2 border-poopgreen hover:bg-transparent hover:text-poopgreen transition-all duration-100 text-2xl font-medium text-herosub"
               >
                 {submitting && <p>Sender...</p>}
                 {!submitting && result && <p>{result}</p>}

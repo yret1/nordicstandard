@@ -63,13 +63,13 @@ const GridContent: React.FC<GridContentProps> = ({
     >
       <motion.section className="flex justify-start items-start w-full pb-6">
         <motion.p
-          className="text-black font-bold font-poppins text-xl text-opacity-35"
+          className="text-optext font-bold font-poppins text-xl text-opacity-35"
           variants={itemVariants}
         >
           {goal}
         </motion.p>
       </motion.section>
-      <hr className="w-full" />
+      <hr className="w-full border-hr" />
 
       <motion.section
         className="w-full py-6"
@@ -78,14 +78,16 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         <motion.h4
-          className="font-bold text-black font-poppins text-5xl pb-5"
+          className="font-bold text-head font-poppins text-5xl pb-5"
           variants={itemVariants}
         >
           {title}
         </motion.h4>
-        <motion.p variants={itemVariants}>{desc}</motion.p>
+        <motion.p className="text-sub" variants={itemVariants}>
+          {desc}
+        </motion.p>
       </motion.section>
-      <hr className="w-full" />
+      <hr className="w-full border-hr" />
 
       {(dataone || datatwo) && (
         <>
@@ -100,10 +102,8 @@ const GridContent: React.FC<GridContentProps> = ({
                 className="opacity-100 text-center"
                 variants={itemVariants}
               >
-                <p className="font-bold text-blue-700 text-4xl">
-                  {dataone.data}
-                </p>
-                <p className="font-bold text-blue-700 text-4xl">
+                <p className="font-bold text-accent text-4xl">{dataone.data}</p>
+                <p className="font-bold text-accent text-4xl">
                   {dataone.value} +
                 </p>
               </motion.div>
@@ -113,16 +113,14 @@ const GridContent: React.FC<GridContentProps> = ({
                 className="opacity-100 text-center"
                 variants={itemVariants}
               >
-                <p className="font-bold text-blue-700 text-4xl">
-                  {datatwo.data}
-                </p>
-                <p className="font-bold text-blue-700 text-4xl">
+                <p className="font-bold text-accent text-4xl">{datatwo.data}</p>
+                <p className="font-bold text-accent text-4xl">
                   {datatwo.value} +
                 </p>
               </motion.div>
             )}
           </motion.section>
-          <hr className="w-full" />
+          <hr className="w-ful border-hr" />
         </>
       )}
 
@@ -133,7 +131,7 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         <motion.a href={href} variants={itemVariants}>
-          <button className="py-2 px-4  rounded-md bg-white border-[1px] border-black shadow-lg hover:bg-blue-700 hover:text-white text-black transition-all duration-100">
+          <button className="py-2 px-4  rounded-md bg-cardbg border-[1px] border-black shadow-lg hover:bg-buttonhover hover:text-herosub text-sub transition-all duration-100">
             <p className=" font-medium text-2xl">{buttonText}</p>
           </button>
         </motion.a>

@@ -25,7 +25,7 @@ const Services = () => {
           dataone={{ data: "Högere leieinntekter", value: "20%" }}
         />
       </section>
-      <section className="font-bold font-poppins text-blue-700 text-2xl md:text-3xl lg:text-5xl py-6">
+      <section className="font-bold font-poppins text-accent text-2xl md:text-3xl lg:text-5xl py-6">
         <p>Vi tilbyr ulike utleiemodeller basert på dine ønske</p>
       </section>
       <section className="grid w-full md:w-10/12 lg:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1">
@@ -48,7 +48,7 @@ const Services = () => {
       </section>
 
       <section className="w-screen py-10 flex justify-center items-center ">
-        <button className="py-2 px-4  rounded-md bg-white border-[1px] border-black shadow-lg hover:bg-blue-700 hover:text-white text-black transition-all duration-100">
+        <button className="py-2 px-4  rounded-md bg-white border-[1px] border-black shadow-lg hover:bg-buttonhover hover:text-herosub text-sub transition-all duration-100">
           <p className=" font-medium ">
             Kontakt oss for en uforpliktende samtale
           </p>
