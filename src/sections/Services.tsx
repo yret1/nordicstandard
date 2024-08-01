@@ -15,7 +15,7 @@ const Services = () => {
     >
       <section className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12">
         <GridImg
-          img="https://images.unsplash.com/photo-1468930830753-6699377de411?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          img="https://images.unsplash.com/photo-1719579019072-96e65b294301?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           pos="object-center"
         />
         <GridContent
@@ -44,15 +44,21 @@ const Services = () => {
         />
       </section>
 
-      <section className="w-screen py-10 flex justify-center items-center ">
-        <button className="py-2 px-4  rounded-md bg-white border-[1px] border-black shadow-lg hover:bg-buttonhover hover:text-herosub text-sub transition-all duration-100">
-          <p className=" font-medium ">
-            Kontakt oss for en uforpliktende samtale
-          </p>
-        </button>
+      <section className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12">
+        <GridContent
+          goal="Kontakt"
+          desc="Vi tar oss tid til å diskutere dine ønsker og behov for å finne den beste løsningen for deg. Kontakt oss for en uforpliktende samtale"
+          title="Kontakt oss"
+          buttonText="Kontakt oss for en uforpliktende samtale"
+          href="/#services"
+        />
+        <GridImg
+          img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          pos="object-center"
+        />
       </section>
 
-      <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 md:grid flex flex-col grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+      <section className="w-full flex flex-col gap-8 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12">
         <GridImg
           img="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           pos="object-center"
