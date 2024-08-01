@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 interface GridContentProps {
-  goal: string;
+  goal?: string;
   title: string;
   desc: string;
   dataone?: {
@@ -58,18 +58,19 @@ const GridContent: React.FC<GridContentProps> = ({
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="w-full h-full flex flex-col justify-evenly items-center"
+      className="w-full h-full flex flex-col justify-evenly items-center px-4"
       ref={sectionRef}
     >
       <motion.section className="flex justify-start items-start w-full pb-6">
-        <motion.p
-          className="text-optext font-bold font-poppins text-xl text-opacity-35"
-          variants={itemVariants}
-        >
-          {goal}
-        </motion.p>
+        {goal && (
+          <motion.p
+            className="text-optext font-bold font-poppins text-xl text-opacity-35"
+            variants={itemVariants}
+          >
+            {goal}
+          </motion.p>
+        )}
       </motion.section>
-      <hr className="w-full border-hr" />
 
       <motion.section
         className="w-full py-6"
@@ -83,11 +84,13 @@ const GridContent: React.FC<GridContentProps> = ({
         >
           {title}
         </motion.h4>
-        <motion.p className="text-sub" variants={itemVariants}>
+        <motion.p
+          className="text-sub text-sm md:text-lg lg:text-2xl"
+          variants={itemVariants}
+        >
           {desc}
         </motion.p>
       </motion.section>
-      <hr className="w-full border-hr" />
 
       {(dataone || datatwo) && (
         <>
@@ -120,7 +123,6 @@ const GridContent: React.FC<GridContentProps> = ({
               </motion.div>
             )}
           </motion.section>
-          <hr className="w-ful border-hr" />
         </>
       )}
 

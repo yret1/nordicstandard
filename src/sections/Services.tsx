@@ -19,7 +19,6 @@ const Services = () => {
           pos="object-center"
         />
         <GridContent
-          goal="Hva tilbyr vi?"
           desc="Vi håndterer din utleie for deg og optimerer leieinntektene dine."
           title="Hva tilbyr vi?"
           href="/#services"
@@ -46,7 +45,6 @@ const Services = () => {
 
       <section className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12">
         <GridContent
-          goal="Kontakt"
           desc="Vi tar oss tid til å diskutere dine ønsker og behov for å finne den beste løsningen for deg. Kontakt oss for en uforpliktende samtale"
           title="Kontakt oss"
           buttonText="Kontakt oss for en uforpliktende samtale"
@@ -64,7 +62,6 @@ const Services = () => {
           pos="object-center"
         />
         <GridContent
-          goal="Tilbakemeldinger"
           title="Fortolighet"
           desc="Vi setter stor pris på fortroligheten vi fått fra våre partnere.Med over 100 fornøyde gjester og samarbeidspartnere jobber vi for deg og din bolig.
 "

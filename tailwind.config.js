@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         bgmain: "#F8FAFC",
-        head: "black",
+        head: "#F46036",
         sub: "black",
         optext: "#0C0A09",
         link: "white",
