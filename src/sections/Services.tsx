@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full flex flex-col justify-center items-center p-4"
+      className="w-full flex flex-col justify-center items-center p-4 "
     >
       <section className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12">
         <GridImg
@@ -17,16 +17,11 @@ const Services = () => {
           pos="object-center"
         />
         <GridContent
-          goal="Tjenester"
-          desc="Vi håndterer din utleie for deg og optimerer leieinntektene dine. Våre boligpartners får økte leieinntekter Og mer fritid. Vår modell setter våre og våre parrnere sine interesser helt i linje."
+          goal="Hva tilbyr vi?"
+          desc="Vi håndterer din utleie for deg og optimerer leieinntektene dine."
           title="Hva tilbyr vi?"
-          buttonText="Hva tilbyr vi?"
           href="/#services"
-          dataone={{ data: "Högere leieinntekter", value: "20%" }}
         />
-      </section>
-      <section className="font-bold font-poppins text-accent text-2xl md:text-3xl lg:text-5xl py-6">
-        <p>Vi tilbyr ulike utleiemodeller basert på dine ønske</p>
       </section>
       <section className="grid w-full md:w-10/12 lg:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1">
         <ServiceBox

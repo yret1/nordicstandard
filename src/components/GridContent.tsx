@@ -14,7 +14,7 @@ interface GridContentProps {
     data: string;
     value: string;
   };
-  buttonText: string;
+  buttonText?: string;
   href: string;
 }
 
@@ -130,11 +130,13 @@ const GridContent: React.FC<GridContentProps> = ({
         animate={controls}
         variants={containerVariants}
       >
-        <motion.a href={href} variants={itemVariants}>
-          <button className="py-2 px-4  rounded-md bg-cardbg border-[1px] border-black shadow-lg hover:bg-buttonhover hover:text-herosub text-sub transition-all duration-100">
-            <p className=" font-medium text-2xl">{buttonText}</p>
-          </button>
-        </motion.a>
+        {buttonText && (
+          <motion.a href={href} variants={itemVariants}>
+            <button className="py-2 px-4  rounded-md bg-cardbg border-[1px] border-black shadow-lg hover:bg-buttonhover hover:text-herosub text-sub transition-all duration-100">
+              <p className=" font-medium text-2xl">{buttonText}</p>
+            </button>
+          </motion.a>
+        )}
       </motion.section>
     </motion.section>
   );
