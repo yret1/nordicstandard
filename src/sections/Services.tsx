@@ -4,12 +4,14 @@ import House from "../assets/House.svg";
 import Coin from "../assets/Coin.svg";
 import GridImg from "../components/GridImg";
 import GridContent from "../components/GridContent";
+import Mainbg from "../assets/Mainbg.svg";
 
 const Services = () => {
   return (
     <section
       id="services"
-      className="w-full flex flex-col justify-center items-center p-4 "
+      style={{ backgroundImage: `url(${Mainbg})` }}
+      className={`w-full flex flex-col justify-center items-center p-4  bg-[#f7efcf] bg-cover bg-bottom`}
     >
       <section className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12">
         <GridImg

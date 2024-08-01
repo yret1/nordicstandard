@@ -24,7 +24,7 @@ const About = () => {
   return (
     <section
       id="om"
-      className="w-screen flex flex-col justify-center items-center pb-12"
+      className="w-screen flex flex-col justify-center items-center pb-12 cover bg-top"
     >
       <p className="font-bold font-poppins text-accent text-2xl md:text-3xl lg:text-5xl py-6">
         Bak selskapet

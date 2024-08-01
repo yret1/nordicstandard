@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SocialCard from "../components/SocialCard";
 import Reach from "./Reach";
-
+import Stattop from "../assets/Stattop.svg";
 const Socialproof = () => {
   const [numReviews, setNumReviews] = useState(3);
 
@@ -79,7 +79,8 @@ const Socialproof = () => {
   return (
     <section
       id="meriter"
-      className="w-screen flex flex-col justify-center items-center pb-12"
+      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12"
+      style={{ backgroundImage: `url(${Stattop})` }}
     >
       <Reach />
       <p className="text-accent font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
