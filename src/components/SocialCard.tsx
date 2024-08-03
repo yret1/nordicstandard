@@ -25,7 +25,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
           />
         </div>
 
-        <p className="font-bold text-head text-sm md:text-lg lg:text-2xl">
+        <p className="font-bold text-contact text-sm md:text-lg lg:text-2xl">
           {name}
         </p>
       </section>

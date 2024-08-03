@@ -10,13 +10,10 @@ const Reach = () => {
     >
       <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 md:grid flex flex-col-reverse grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
         <GridContent
-          goal="Airbnb"
           title="Superhost!"
           desc="Vi er Superhosts på Airbnb. Dette er  vanskelig at oppnå, samt å enda vanskeligere å beholde over lenger tid."
-          dataone={{ data: "År på airbnb", value: "6" }}
-          datatwo={{ data: "Vurdering", value: "4.95" }}
-          buttonText="Til Airbnb"
-          href="https://www.airbnb.co.uk/"
+          buttonText="Sjekk ut vår profil på Airbnb"
+          href="https://www.airbnb.com/users/show/56021483"
         />
         <GridImg img={Superhost} pos="object-center" />
       </section>

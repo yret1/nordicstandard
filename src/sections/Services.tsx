@@ -21,6 +21,7 @@ const Services = () => {
         <GridImg
           img="https://images.unsplash.com/photo-1719579019072-96e65b294301?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           pos="object-center"
+          ver="2"
           aria-label="Image depicting a house for short-term rental"
         />
         <GridContent
@@ -69,25 +70,6 @@ const Services = () => {
           img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           pos="object-center"
           aria-label="Image depicting a consultation"
-        />
-      </section>
-
-      <section
-        className="w-full flex flex-col gap-8 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
-        aria-label="Testimonials Section"
-      >
-        <GridImg
-          img="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          pos="object-center"
-          aria-label="Image showing happy customers"
-        />
-        <GridContent
-          title="Fortolighet"
-          desc="Vi setter stor pris på fortroligheten vi fått fra våre partnere. Med over 100 fornøyde gjester og samarbeidspartnere jobber vi for deg og din bolig."
-          dataone={{ data: "Rating", value: "4.9 / 5" }}
-          buttonText="Se vad partnere sier"
-          href="/#meriter"
-          aria-label="Partner testimonials and ratings"
         />
       </section>
     </section>

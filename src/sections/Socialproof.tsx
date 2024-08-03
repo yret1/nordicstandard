@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import SocialCard from "../components/SocialCard";
 import Reach from "./Reach";
 import Stattop from "../assets/Stattop.svg";
+import GridImg from "../components/GridImg";
+import GridContent from "../components/GridContent";
 const Socialproof = () => {
   const [numReviews, setNumReviews] = useState(3);
 
@@ -82,8 +84,25 @@ const Socialproof = () => {
       className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12"
       style={{ backgroundImage: `url(${Stattop})` }}
     >
+      <section
+        className="w-full flex flex-col gap-8 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
+        aria-label="Testimonials Section"
+      >
+        <GridImg
+          img="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          pos="object-center"
+          aria-label="Image showing happy customers"
+        />
+        <GridContent
+          title="Fortrolighet"
+          desc="Vi setter stor pris på fortroligheten som vi har fått fra våre boligpartnere. Med over 400 bookinger og over 300 tilbakemeldinger fra gjestene våre, så jobber vi med høy integritet for boligpartnerne og gjestene våre."
+          buttonText="Se vad partnere sier"
+          href="/#meriter"
+          aria-label="Partner testimonials and ratings"
+        />
+      </section>
       <Reach />
-      <p className="text-accent font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
+      <p className="text-contact font-poppins font-bold py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre partnere sier!
       </p>
       <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
@@ -99,7 +118,7 @@ const Socialproof = () => {
         ))}
       </section>
 
-      <p className="text-accent font-poppins font-medium py-10 md:text-4xl text-2xl lg:text-5xl">
+      <p className="text-contact font-poppins font-bold py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre gjester sier!
       </p>
       <section className="w-screen md:w-10/12 lg:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">

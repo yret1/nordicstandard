@@ -216,7 +216,7 @@ const Header = () => {
                     currentSection == item.text.toLowerCase() + "-link"
                       ? "border-black bg-white hover:border-slate-200"
                       : "border-transparent bg-transparent hover:border-white"
-                  } transition-all font-sans `}
+                  } transition-all font-poppins `}
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -235,7 +235,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className=" tooltip bg-black bg-opacity-65 text-white font-poppins p-2 rounded-md mt-px z-20"
+              className=" tooltip bg-black bg-opacity-65 text-white font-comorant p-2 rounded-md mt-px z-20"
               style={{
                 top: tooltip.position.top,
                 left: tooltip.position.left,

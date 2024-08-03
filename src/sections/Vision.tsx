@@ -8,10 +8,10 @@ const GoalCard = ({
   description: string;
 }) => {
   return (
-    <section className="w-full md:border-2 md:p-4 rounded-md md:bg-cardbg border-borders  flex md:h-full flex-col justify-start items-center">
+    <section className="w-full md:border-2 md:p-4 rounded-md md:bg-cardbg border-contact  flex md:h-full flex-col justify-start items-center">
       <hr className="w-full block md:hidden" />
       <div className="flex flex-col justify-start items-start gap-2 h-full pt-6 md:pt-0">
-        <p className="font-bold text-xl font-poppins text-head">{title}</p>
+        <p className="font-bold text-xl font-poppins text-contact">{title}</p>
         <p className="text-sub">{description}</p>
       </div>
     </section>

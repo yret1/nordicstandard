@@ -79,7 +79,7 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         <motion.h4
-          className="font-bold text-head font-poppins text-5xl pb-5"
+          className="font-bold text-contact font-poppins text-5xl pb-5"
           variants={itemVariants}
         >
           {title}
@@ -134,7 +134,7 @@ const GridContent: React.FC<GridContentProps> = ({
       >
         {buttonText && (
           <motion.a href={href} variants={itemVariants}>
-            <button className="py-2 px-4  rounded-md bg-cardbg border-[1px] border-black shadow-lg hover:bg-buttonhover hover:text-herosub text-sub transition-all duration-100">
+            <button className="py-2 px-4  rounded-lg bg-cardbg  shadow-lg hover:bg-contact hover:text-herosub text-sub transition-all duration-100">
               <p className=" font-medium text-2xl">{buttonText}</p>
             </button>
           </motion.a>
