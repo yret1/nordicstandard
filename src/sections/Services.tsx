@@ -4,14 +4,12 @@ import House from "../assets/House.svg";
 import Coin from "../assets/Coin.svg";
 import GridImg from "../components/GridImg";
 import GridContent from "../components/GridContent";
-import Mainbg from "../assets/Mainbg.svg";
 
 const Services = () => {
   return (
     <section
       id="services"
-      style={{ backgroundImage: `url(${Mainbg})` }}
-      className={`w-full flex flex-col justify-center items-center p-4 bg-[#f7efcf] bg-cover bg-bottom`}
+      className={`w-full flex flex-col justify-center bg-botWave items-center p-4 bg-[#f7efcf] bg-cover bg-bottom`}
       aria-label="Our Services Section"
     >
       <section

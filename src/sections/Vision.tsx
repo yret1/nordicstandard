@@ -1,5 +1,3 @@
-import Statbot from "../assets/Statbot.svg";
-
 const GoalCard = ({
   title,
   description,
@@ -22,8 +20,7 @@ const Vision = () => {
   return (
     <section
       id="visjon"
-      className="w-screen flex justify-center items-center p-6 bg-cover bg-top"
-      style={{ backgroundImage: `url(${Statbot})` }}
+      className="w-screen flex justify-center items-center p-6 bg-cover bg-top bg-botYellow"
     >
       <section className="w-screen flex flex-col justify-center items-center">
         <p className="font-poppins py-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl pb-12 md:pb-20">

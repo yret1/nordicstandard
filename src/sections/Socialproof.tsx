@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import SocialCard from "../components/SocialCard";
 import Reach from "./Reach";
-import Stattop from "../assets/Stattop.svg";
 import GridImg from "../components/GridImg";
 import GridContent from "../components/GridContent";
 const Socialproof = () => {
@@ -81,8 +80,7 @@ const Socialproof = () => {
   return (
     <section
       id="meriter"
-      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12"
-      style={{ backgroundImage: `url(${Stattop})` }}
+      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12 bg-topYellow"
     >
       <section
         className="w-full flex flex-col gap-8 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
