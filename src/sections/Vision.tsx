@@ -23,7 +23,7 @@ const Vision = () => {
       className="w-screen flex justify-center items-center p-6 bg-cover bg-top bg-botYellow"
     >
       <section className="w-screen flex flex-col justify-center items-center">
-        <p className="font-poppins py-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl pb-12 md:pb-20">
+        <p className="font-poppins pb-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl pb-12 md:pb-20">
           Hovrfor Nordisk Standard?
         </p>
 

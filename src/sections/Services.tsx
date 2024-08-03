@@ -12,7 +12,7 @@ const Services = () => {
       aria-label="Our Services Section"
     >
       <section
-        className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
+        className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 lg:w-8/12"
         aria-label="Service Offerings"
       >
         <GridImg
@@ -29,7 +29,7 @@ const Services = () => {
         />
       </section>
       <section
-        className="grid w-full md:w-10/12 lg:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1"
+        className="grid w-full lg:w-11/12 xl:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-3 lg:grid-cols-3 md:grid-rows-1"
         aria-label="Service Boxes"
       >
         <ServiceBox
