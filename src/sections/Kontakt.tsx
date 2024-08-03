@@ -66,8 +66,8 @@ const Kontakt = () => {
         <p className="text-black text-opacity-35 font-light font-poppins pb-4">
           Kontakt oss
         </p>
-        <hr className="w-full border-accent" />
-        <p className="text-accent text-4xl font-poppins pt-10">
+        <hr className="w-full border-contact" />
+        <p className="text-contact text-4xl font-poppins pt-10">
           Bli våran boligparnet
         </p>
       </section>
@@ -76,13 +76,9 @@ const Kontakt = () => {
         <p className="text-optext text-opacity-35 font-light font-poppins pb-4">
           Din informasjon
         </p>
-        <hr className="w-full border-accent" />
+        <hr className="w-full border-contact" />
 
-        <p className="text-optext text-opacity-55 font-poppins font-medium font-2xl pt-10">
-          Klar for neste trinn? Ta kontakt med oss for å diskutere din bolig.
-        </p>
-
-        <form className="w-full" onSubmit={(e) => onSubmit(e)}>
+        <form className="w-full pt-12" onSubmit={(e) => onSubmit(e)}>
           <fieldset className="w-full py-2 flex md:flex-row flex-col justify-center gap-6">
             <section className="w-full">
               <label
@@ -167,7 +163,7 @@ const Kontakt = () => {
             <section className="w-full">
               <button
                 type="submit"
-                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-poopgreen border-2 border-poopgreen hover:bg-transparent hover:text-poopgreen transition-all duration-100 text-2xl font-medium text-herosub"
+                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-contact border-2 border-contact hover:bg-transparent hover:text-contact transition-all duration-100 text-2xl font-medium text-herosub"
               >
                 {submitting && <p>Sender...</p>}
                 {!submitting && result && <p>{result}</p>}

@@ -16,7 +16,7 @@ const Services = () => {
         aria-label="Service Offerings"
       >
         <GridImg
-          img="https://images.unsplash.com/photo-1719579019072-96e65b294301?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          img="https://media.istockphoto.com/id/1395942019/sv/foto/st-hanshaugen.jpg?s=2048x2048&w=is&k=20&c=xxDsVn6QqGK51mDpTTPC6-XOkY02ycPpcvtc0tWyH4E="
           pos="object-center"
           ver="2"
           aria-label="Image depicting a house for short-term rental"
@@ -64,7 +64,7 @@ const Services = () => {
           aria-label="Contact us for a consultation"
         />
         <GridImg
-          img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          img="https://media.istockphoto.com/id/1395942019/sv/foto/st-hanshaugen.jpg?s=2048x2048&w=is&k=20&c=xxDsVn6QqGK51mDpTTPC6-XOkY02ycPpcvtc0tWyH4E="
           pos="object-center"
           aria-label="Image depicting a consultation"
         />

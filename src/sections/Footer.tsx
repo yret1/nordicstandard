@@ -3,7 +3,7 @@ import { links } from "../components/Header";
 const Footer = () => {
   return (
     <section className="w-screen shadow-inner">
-      <section className="flex w-full justify-between flex-col bg-accent">
+      <section className="flex w-full justify-between flex-col bg-slate-900 pt-12">
         <section className="flex flex-col md:flex-row">
           <section className="flex flex-col justify-start items-start text-left w-full p-4">
             <p className="text-herohead font-bold font-poppins text-2xl">
@@ -38,13 +38,10 @@ const Footer = () => {
                   Airbnb
                 </li>
                 <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
-                  Airbnb
+                  Instagram
                 </li>
                 <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
-                  Airbnb
-                </li>
-                <li className="text-herohead font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
-                  Airbnb
+                  linkedin
                 </li>
               </ul>
             </section>

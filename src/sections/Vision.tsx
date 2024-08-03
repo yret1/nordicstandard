@@ -24,7 +24,7 @@ const Vision = () => {
     >
       <section className="w-screen flex flex-col justify-center items-center">
         <p className="font-poppins py-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl pb-12 md:pb-20">
-          NS Visjon
+          Hovrfor Nordisk Standard?
         </p>
 
         <section className="w-screen lg:w-8/12 grid grid-cols-1 md:grid-cols-3 gap-5 p-6 md:flex-row ">
@@ -40,7 +40,7 @@ const Vision = () => {
           />
           <GoalCard
             title="Trygt"
-            description="Gjennom samarbeid, optimalisering og et pålitelig fagnettverk, jobber vi for å gjøre ditt hjem best mulig."
+            description="Gjennom samarbeid, optimalisering og et pålitelig fagnettverk, jobber vi for å vedlike holde boligen din. En del er skeptiske til Airbnb utleie. Det som er godt og hvit er at gjester alltid må ha tidligere vurdering og er avhengig og at fortsatt få god tilbake melding. Var erfaring er at gjester tar godt vare på hjemmet og at de faktiskt blir mindre slitasjen på boligene, då majoriteten er ute og utforsker byen."
           />
         </section>
       </section>
