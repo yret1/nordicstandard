@@ -6,7 +6,7 @@ const Reach = () => {
   return (
     <section
       id="reach"
-      className="w-screen flex flex-col gap-12 justify-center items-center pt-20"
+      className="w-screen flex flex-col gap-12 justify-center items-center"
     >
       <section className="w-11/12 place-items-center gap-8 p-6  justify-items-center md:p-6 md:w-10/12 lg:w-8/12 md:grid flex flex-col-reverse grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
         <GridContent
