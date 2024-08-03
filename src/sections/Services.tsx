@@ -4,7 +4,6 @@ import House from "../assets/House.svg";
 import Coin from "../assets/Coin.svg";
 import GridImg from "../components/GridImg";
 import GridContent from "../components/GridContent";
-
 const Services = () => {
   return (
     <section
@@ -54,7 +53,7 @@ const Services = () => {
       </section>
 
       <section
-        className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
+        className="w-full flex flex-col-reverse gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
         aria-label="Contact Us Section"
       >
         <GridContent

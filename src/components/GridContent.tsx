@@ -58,7 +58,7 @@ const GridContent: React.FC<GridContentProps> = ({
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="w-full h-full flex flex-col justify-evenly items-center px-4"
+      className="w-full h-full flex flex-col justify-evenly items-center px-4 z-10"
       ref={sectionRef}
     >
       <motion.section className="flex justify-start items-start w-full pb-6">

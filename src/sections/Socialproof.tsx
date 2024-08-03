@@ -80,10 +80,10 @@ const Socialproof = () => {
   return (
     <section
       id="meriter"
-      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12 bg-topYellow"
+      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12 px-6 bg-topYellow"
     >
       <section
-        className="w-full flex flex-col gap-8 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
+        className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
         aria-label="Testimonials Section"
       >
         <GridImg
