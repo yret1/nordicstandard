@@ -9,9 +9,9 @@ export default {
         comorant: ["Cormorant SC", "serif"],
       },
       backgroundImage: {
-        botWave: "url('/assets/Mainbg.svg')",
-        topYellow: "url('/assets/Stattop.svg')",
-        botYellow: "url('/assets/Statbot.svg')",
+        botWave: "url('./assets/Mainbg.svg')",
+        topYellow: "url('./assets/Stattop.svg')",
+        botYellow: "url('./assets/Statbot.svg')",
       },
       colors: {
         bgmain: "#F8FAFC",
