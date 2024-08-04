@@ -64,7 +64,7 @@ const GridContent: React.FC<GridContentProps> = ({
       <motion.section className="flex justify-start items-start w-full pb-6">
         {goal && (
           <motion.p
-            className="text-optext font-bold font-poppins text-xl text-opacity-35"
+            className="text-optext font-bold font-comorant text-xl text-opacity-35"
             variants={itemVariants}
           >
             {goal}
@@ -79,13 +79,13 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         <motion.h4
-          className="font-bold text-contact font-poppins text-5xl pb-5"
+          className="font-bold text-contact font-comorant text-5xl pb-5"
           variants={itemVariants}
         >
           {title}
         </motion.h4>
         <motion.p
-          className="text-sub text-sm md:text-lg lg:text-2xl"
+          className="text-sub font-infant text-sm md:text-lg lg:text-2xl"
           variants={itemVariants}
         >
           {desc}
@@ -135,7 +135,7 @@ const GridContent: React.FC<GridContentProps> = ({
         {buttonText && (
           <motion.a href={href} variants={itemVariants}>
             <button className="py-2 px-4  rounded-lg bg-cardbg  shadow-lg hover:bg-contact hover:text-herosub text-sub transition-all duration-100">
-              <p className=" font-medium text-2xl">{buttonText}</p>
+              <p className=" font-medium font-infant text-2xl">{buttonText}</p>
             </button>
           </motion.a>
         )}

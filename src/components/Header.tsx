@@ -216,7 +216,7 @@ const Header = () => {
                     currentSection == item.text.toLowerCase() + "-link"
                       ? "border-black bg-white hover:border-slate-200"
                       : "border-transparent bg-transparent hover:border-white"
-                  } transition-all font-poppins `}
+                  } transition-all font-infant `}
                   onMouseEnter={(e) => handleMouseEnter(e, item)}
                   onMouseLeave={handleMouseLeave}
                 >

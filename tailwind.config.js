@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         //poppins: ["Poppins", "sans-serif"],
-        poppins: ["Cormorant SC", "serif"],
+        infant: ["Cormorant Infant", "serif"],
         comorant: ["Cormorant SC", "serif"],
       },
       backgroundImage: {

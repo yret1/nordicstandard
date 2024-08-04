@@ -93,7 +93,7 @@ const Hero = () => {
               y: 0,
             }}
             transition={{ delay: 0.2, ease: "anticipate" }}
-            className="text-herohead text-center font-bold text-4xl font-poppins md:text-5xl lg:text-6xl md:drop-shadow-lg"
+            className="text-herohead text-center font-bold text-4xl font-comorant md:text-5xl lg:text-6xl md:drop-shadow-lg"
             aria-label="Main Heading"
           >
             Din Utleiepartner
@@ -109,13 +109,13 @@ const Hero = () => {
               y: 0,
             }}
             transition={{ delay: 0.3, ease: "anticipate" }}
-            className="text-herosub font-medium text-center text-lg md:text-xl lg:text-2xl font-poppins"
+            className="text-herosub font-medium text-center text-lg md:text-xl lg:text-2xl font-infant"
             aria-label="Subheading"
           >
             Vi frigjør din viktigste resurs, din tid.
           </motion.p>
           <motion.a
-            href="/#reach"
+            href="/#services"
             className="w-full flex justify-center text-herosub absolute p-4 bottom-8 animate-bounce items-center md:mt-8"
             aria-label="Scroll Down Link"
           >

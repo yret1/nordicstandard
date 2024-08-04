@@ -63,17 +63,17 @@ const Kontakt = () => {
       className="w-screen justify-center items-start gap-6 flex flex-col md:flex-row p-6 bg-slate-100"
     >
       <section className="w-full md:w-5/12 pt-10 md:py-20 flex flex-col justify-start items-start">
-        <p className="text-black text-opacity-35 font-light font-poppins pb-4">
+        <p className="text-black text-opacity-35 font-light font-infant pb-4">
           Kontakt oss
         </p>
         <hr className="w-full border-contact" />
-        <p className="text-contact text-4xl font-poppins pt-10">
+        <p className="text-contact text-4xl font-comorant pt-10">
           Bli våran boligparnet
         </p>
       </section>
 
       <section className="w-full md:w-5/12 py-20 flex flex-col justify-start items-start">
-        <p className="text-optext text-opacity-35 font-light font-poppins pb-4">
+        <p className="text-optext text-opacity-35 font-light font-infant pb-4">
           Din informasjon
         </p>
         <hr className="w-full border-contact" />
@@ -83,7 +83,7 @@ const Kontakt = () => {
             <section className="w-full">
               <label
                 htmlFor="name"
-                className="text-black font-poppins font-medium pb-4"
+                className="text-black font-comorant font-bold pb-4"
               >
                 Navn*
               </label>
@@ -95,13 +95,13 @@ const Kontakt = () => {
                 id="name"
                 name="name"
                 placeholder="Fullt navn"
-                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
+                className="w-full font-infant p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
             <section className="w-full">
               <label
                 htmlFor="tel"
-                className="text-black font-poppins font-medium pb-4"
+                className="text-black font-comorant font-bold pb-4"
               >
                 Tel
               </label>
@@ -112,7 +112,7 @@ const Kontakt = () => {
                 id="tel"
                 name="tel"
                 placeholder="+12 345 678"
-                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
+                className="w-full font-infant p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
           </fieldset>
@@ -121,7 +121,7 @@ const Kontakt = () => {
             <section className="w-full">
               <label
                 htmlFor="email"
-                className="text-black font-poppins font-medium pb-4"
+                className="text-black font-comorant font-bold pb-4"
               >
                 E-post*
               </label>
@@ -132,8 +132,8 @@ const Kontakt = () => {
                 required
                 id="email"
                 name="email"
-                placeholder="e-post"
-                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
+                placeholder="E-post"
+                className="w-full font-infant p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
           </fieldset>
@@ -142,7 +142,7 @@ const Kontakt = () => {
             <section className="w-full">
               <label
                 htmlFor="email"
-                className="text-black font-poppins font-medium pb-4"
+                className="text-black font-comorant font-bold pb-4"
               >
                 Din beskjed*
               </label>
@@ -154,7 +154,7 @@ const Kontakt = () => {
                 name="message"
                 placeholder="Hva kan vi gjøre for deg?"
                 cols={60}
-                className="w-full p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
+                className="w-full font-infant p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
           </fieldset>
@@ -163,7 +163,7 @@ const Kontakt = () => {
             <section className="w-full">
               <button
                 type="submit"
-                className="w-full md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-contact border-2 border-contact hover:bg-transparent hover:text-contact transition-all duration-100 text-2xl font-medium text-herosub"
+                className="w-full font-infant md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-contact border-2 border-contact hover:bg-transparent hover:text-contact transition-all duration-100 text-2xl font-medium text-herosub"
               >
                 {submitting && <p>Sender...</p>}
                 {!submitting && result && <p>{result}</p>}

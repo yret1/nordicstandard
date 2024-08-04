@@ -8,11 +8,13 @@ const GoalCard = ({
   index?: number;
 }) => {
   return (
-    <section className="w-full md:border-2 md:p-4 rounded-md md:bg-cardbg border-contact  flex md:h-full flex-col justify-start items-center">
+    <section className="w-full md:border-2 md:p-6 rounded-md md:bg-cardbg border-contact  flex md:h-full flex-col justify-start items-center">
       <hr className={`w-full block md:hidden ${index == 0 ? "hidden" : ""}`} />
       <div className="flex flex-col justify-start items-start gap-2 h-full pt-6 md:pt-0">
-        <p className="font-bold text-xl font-poppins text-contact">{title}</p>
-        <p className="text-sub">{description}</p>
+        <p className="font-bold text-xl font-comorant text-contact">{title}</p>
+        <p className="text-sub font-semibold text-xl font-infant">
+          {description}
+        </p>
       </div>
     </section>
   );
@@ -25,7 +27,7 @@ const Vision = () => {
       className="w-screen flex justify-center items-center p-6 bg-cover bg-top bg-botYellow"
     >
       <section className="w-screen flex flex-col justify-center items-center">
-        <p className="font-poppins pb-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl md:pb-20">
+        <p className="font-comorant pb-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl md:pb-20">
           Hovrfor Nordisk Standard?
         </p>
 

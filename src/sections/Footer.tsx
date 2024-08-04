@@ -6,25 +6,27 @@ const Footer = () => {
       <section className="flex w-full justify-between flex-col bg-slate-900 pt-12">
         <section className="flex flex-col md:flex-row">
           <section className="flex flex-col justify-start items-start text-left w-full p-4">
-            <p className="text-herohead font-bold font-poppins text-2xl">
+            <p className="text-herohead font-bold font-comorant text-2xl">
               Nordisk Standard
               <br />
-              <span className="text-lg font-normal text-herohead">
+              <span className="text-lg font-normal font-comorant text-herohead">
                 Din Airbnb Partner
               </span>
             </p>
-            <p className="text-herosub font-normal font-poppins text-opacity-45">
+            <p className="text-herosub font-normal font-infant text-opacity-45">
               Maridalsveien 39 A <br />
               0175 Oslo
             </p>
           </section>
 
           <section className="w-full p-4 flex flex-col gap-2">
-            <p className="font-bold text-herohead text-lg">Navigate</p>
+            <p className="font-bold font-comorant text-herohead text-lg">
+              Navigate
+            </p>
             <ul className="flex flex-col gap-2 justify-start items-start md:flex-row">
               {links.map((item, index) => (
                 <a key={index} href={item.href}>
-                  <li className="text-white font-poppins text-opacity-45 cursor-pointer hover:text-opacity-100">
+                  <li className="text-white font-infant text-opacity-45 cursor-pointer hover:text-opacity-100">
                     {item.text}
                   </li>
                 </a>
@@ -32,9 +34,16 @@ const Footer = () => {
             </ul>
 
             <section>
-              <p className="font-bold text-herohead text-lg">Socials</p>
+              <p className="font-bold text-herohead font-comorant text-lg">
+                Socials
+              </p>
               <ul className="flex flex-col gap-2 justify-start items-start md:items-center md:flex-row p-2">
-                <a className="text-herohead font-poppins text-opacity-45 w-8 h-8 cursor-pointer group hover:text-opacity-100">
+                <a
+                  href="https://www.airbnb.com/users/show/56021483"
+                  referrerPolicy="no-referrer"
+                  target="_blank"
+                  className="text-herohead font-poppins text-opacity-45 w-8 h-8 cursor-pointer group hover:text-opacity-100"
+                >
                   <svg
                     className="group-hover:stroke-contact fill-white group-hover:fill-contact transition-all"
                     viewBox="0 0 24 24"
