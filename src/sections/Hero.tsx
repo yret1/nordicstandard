@@ -1,4 +1,5 @@
-import LandingVideo from "../assets/Landing.mp4";
+//import LandingVideo from "../assets/Landing.mp4";
+import Landing from "../assets/Location.jpeg";
 import Arrow from "../assets/Arrowdown.svg";
 import Arrowb from "../assets/Arrowdownb.svg";
 import { motion } from "framer-motion";
@@ -52,12 +53,14 @@ const Hero = () => {
       className="w-screen h-screen bg-[url('./assets/NorwayDesktop.png')] bg-cover"
       aria-label="Home Section"
     >
-      {/*  <img
-        src="https://media.istockphoto.com/id/1172796126/sv/foto/hamn-och-finansdistrikt-utsikt-%C3%B6ver-oslo-norge.jpg?s=2048x2048&w=is&k=20&c=xWE2i0yVRWsTiSXdjkrfL0ZUvH3lxjnVlMA7z4dpqaY="
-        alt="Oslo image"
-        className="w-full h-full object-cover absolute top-0 left-0"
-      /> */}
       {
+        <img
+          src={Landing}
+          alt="Oslo image"
+          className="w-full h-full object-cover absolute top-0 left-0"
+        />
+      }
+      {/** 
         <video
           autoPlay
           controls={false}
@@ -70,7 +73,7 @@ const Hero = () => {
           <source src={LandingVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      }
+      */}
       <section
         className="w-full h-full flex justify-center items-center md:justify-center md:items-center bg-black bg-opacity-45 absolute top-0 pb-20 p-5 md:p-10 left-0"
         aria-label="Overlay Section"
