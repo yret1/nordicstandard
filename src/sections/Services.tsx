@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className={`w-full flex flex-col justify-center bg-botWave items-center p-4 bg-[#f7efcf] bg-cover bg-bottom`}
+      className={`w-full flex flex-col justify-center bg-botWave items-center p-4 bg-[#f7efcf] bg-cover bg-bottom pb-32`}
       aria-label="Our Services Section"
     >
       <section
