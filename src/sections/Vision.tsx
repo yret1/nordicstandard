@@ -9,10 +9,16 @@ const GoalCard = ({
 }) => {
   return (
     <section className="w-full md:border-2 md:p-6 rounded-md md:bg-cardbg border-contact  flex md:h-full flex-col justify-start items-center">
-      <hr className={`w-full block md:hidden ${index == 0 ? "hidden" : ""}`} />
+      <hr
+        className={`w-full block md:hidden ${
+          index == 0 ? "hidden" : ""
+        } border-opacity-35 border-white`}
+      />
       <div className="flex flex-col justify-start items-start gap-2 h-full pt-6 md:pt-0">
         <p className="font-bold text-xl font-comorant text-contact">{title}</p>
-        <p className="text-sub font-semibold text-xl font-infant">
+        <p
+          className={`text-white md:text-sub font-semibold text-xl font-infant`}
+        >
           {description}
         </p>
       </div>
@@ -24,11 +30,11 @@ const Vision = () => {
   return (
     <section
       id="visjon"
-      className="w-screen flex justify-center items-center p-6 bg-cover bg-top bg-botYellow"
+      className="w-screen flex justify-center items-center p-6 bg-cover bg-top bg-orango"
     >
       <section className="w-screen flex flex-col justify-center items-center">
         <p className="font-comorant pb-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl md:pb-20">
-          Hovrfor Nordisk Standard?
+          Vår visjon er at tilby Nordisk Standard på våre gjesteopplevelser
         </p>
 
         <section className="w-screen lg:w-8/12 grid grid-cols-1 md:grid-cols-3 gap-5 p-6 pt-10 md:flex-row ">

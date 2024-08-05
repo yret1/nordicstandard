@@ -80,7 +80,7 @@ const Socialproof = () => {
   return (
     <section
       id="meriter"
-      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-12 px-6 bg-topYellow"
+      className="w-screen flex flex-col justify-center items-center bg-cover bg-bottom pb-2 px-6"
     >
       <section
         className="w-full flex flex-col gap-4 md:grid grid-cols-2 py-6 md:py-12 md:w-10/12 lg:w-8/12"
@@ -118,7 +118,7 @@ const Socialproof = () => {
       <p className="text-contact font-comorant font-bold py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre gjester sier!
       </p>
-      <section className="w-screen md:w-12/12 lg:w-11/12 xl:w-10/12 2xl:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-1 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
+      <section className="w-screen md:w-12/12 lg:w-11/12 xl:w-10/12 2xl:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-1  lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
         {reviewsGuests.slice(0, numReviews).map((review, index) => (
           <SocialCard
             key={index + review.name}

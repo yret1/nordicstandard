@@ -58,19 +58,21 @@ const GridContent: React.FC<GridContentProps> = ({
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="w-full h-full flex flex-col justify-evenly items-center px-4 z-10"
+      className={`w-full h-full flex flex-col ${
+        title == "Superhost!" ? "justify-between" : "justify-evenly"
+      } items-center px-4 z-10`}
       ref={sectionRef}
     >
-      <motion.section className="flex justify-start items-start w-full pb-6">
-        {goal && (
+      {goal && (
+        <motion.section className="flex justify-start items-start w-full pb-6">
           <motion.p
             className="text-optext font-bold font-comorant text-xl text-opacity-35"
             variants={itemVariants}
           >
             {goal}
           </motion.p>
-        )}
-      </motion.section>
+        </motion.section>
+      )}
 
       <motion.section
         className="w-full py-6"
@@ -133,7 +135,12 @@ const GridContent: React.FC<GridContentProps> = ({
         variants={containerVariants}
       >
         {buttonText && (
-          <motion.a href={href} variants={itemVariants}>
+          <motion.a
+            href={href}
+            referrerPolicy="no-referrer"
+            target={title == "Superhost!" ? "_blank" : ""}
+            variants={itemVariants}
+          >
             <button className="py-2 px-4  rounded-lg bg-cardbg  shadow-lg hover:bg-contact hover:text-herosub text-sub transition-all duration-100">
               <p className=" font-medium font-infant text-2xl">{buttonText}</p>
             </button>

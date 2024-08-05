@@ -4,7 +4,6 @@ import Hero from "./sections/Hero";
 import Kontakt from "./sections/Kontakt";
 
 import Services from "./sections/Services";
-import Stats from "./sections/Stats";
 
 import Socialproof from "./sections/Socialproof";
 import About from "./sections/About";
@@ -21,9 +20,9 @@ function App() {
 
         <Socialproof />
 
-        <Stats />
-
+        <section className="w-screen h-60 bg-bottom bg-topYellow bg-cover"></section>
         <Vision />
+        <section className="w-screen h-40 lg:h-60 bg-botYellow bg-top bg-cover"></section>
 
         <About />
 

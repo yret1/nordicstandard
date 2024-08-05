@@ -60,7 +60,7 @@ const Kontakt = () => {
   return (
     <section
       id="kontakt"
-      className="w-screen justify-center items-start gap-6 flex flex-col md:flex-row p-6 bg-slate-100"
+      className="w-screen justify-center items-start gap-6 flex flex-col md:flex-row p-6 bg-slate-50"
     >
       <section className="w-full md:w-5/12 pt-10 md:py-20 flex flex-col justify-start items-start">
         <p className="text-black text-opacity-35 font-light font-infant pb-4">
@@ -163,7 +163,7 @@ const Kontakt = () => {
             <section className="w-full">
               <button
                 type="submit"
-                className="w-full font-infant md:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-contact border-2 border-contact hover:bg-transparent hover:text-contact transition-all duration-100 text-2xl font-medium text-herosub"
+                className="w-full font-infant lg:w-6/12 py-2 px-4 h-14 rounded-md flex justify-center items-center bg-contact border-2 border-contact hover:bg-transparent hover:text-contact transition-all duration-100 text-2xl font-medium text-herosub"
               >
                 {submitting && <p>Sender...</p>}
                 {!submitting && result && <p>{result}</p>}

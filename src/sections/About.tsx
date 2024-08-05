@@ -1,7 +1,8 @@
-import AuthorCard from "../components/AuthorCard";
+//import AuthorCard from "../components/AuthorCard";
+import VIsionbox from "../components/VIsionbox";
 
 const About = () => {
-  const Profiles = [
+  /*const Profiles = [
     {
       name: "Samir Kamrouna",
       title: "CEO",
@@ -20,24 +21,13 @@ const About = () => {
       background:
         "Jobbet i Airbnb i 5 år, og har en lidenskap for interiørdesign. Elsker å reise og møte nye mennesker.",
     },
-  ];
+  ];*/
   return (
     <section
       id="om"
       className="w-screen flex flex-col justify-center items-center pb-12 cover bg-top"
     >
-      <p className="font-bold font-comorant text-contact text-2xl md:text-3xl lg:text-5xl py-6">
-        Bak selskapet
-      </p>
-      <section className="w-11/12 md:w-10/12 lg:w-8/12 gap-4 md:gap-6 lg:gap-10 grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
-        {Profiles.map((profile, index) => (
-          <AuthorCard
-            key={profile.name + index}
-            name={profile.name}
-            img={profile.img}
-          />
-        ))}
-      </section>
+      <VIsionbox />
     </section>
   );
 };

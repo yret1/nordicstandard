@@ -28,7 +28,7 @@ export default {
         servicetext: "",
         cardbg: "white",
         bannerbg: "#FCA806",
-
+        orango: "#FCA806",
         poopgreen: "#817C52",
         contact: "#F27984",
 
