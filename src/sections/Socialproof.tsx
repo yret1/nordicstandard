@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SocialCard from "../components/SocialCard";
 import Reach from "./Reach";
+import KeyImage from "../assets/KeyImage.avif";
 import GridImg from "../components/GridImg";
 import GridContent from "../components/GridContent";
 const Socialproof = () => {
@@ -87,10 +88,10 @@ const Socialproof = () => {
         aria-label="Testimonials Section"
       >
         <GridImg
-          img="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          img={KeyImage}
           pos="object-center"
           alt="Image showing keys to an apartment being handed over."
-          aria-label="Image showing happy customers"
+          aria-label="Image showing keys being handed over."
         />
         <GridContent
           title="Fortrolighet"

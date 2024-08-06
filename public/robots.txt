@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /private/
-Disallow: /admin/
-Disallow: /secret-page.html
+indexing: true
 Allow: /public/
 Allow: /src/

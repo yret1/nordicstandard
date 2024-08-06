@@ -1,6 +1,6 @@
 import GridContent from "../components/GridContent";
 import GridImg from "../components/GridImg";
-import Superhost from "../assets/Superhost.png";
+import Superhost from "../assets/Superhost.avif";
 
 const Reach = () => {
   return (

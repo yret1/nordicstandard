@@ -1,5 +1,5 @@
 //import LandingVideo from "../assets/Landing.mp4";
-import Landing from "../assets/Location.jpeg";
+import Landing from "../assets/Location.avif";
 import Arrow from "../assets/Arrowdown.svg";
 import Arrowb from "../assets/Arrowdownb.svg";
 import { motion } from "framer-motion";

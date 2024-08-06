@@ -88,6 +88,7 @@ const Kontakt = () => {
                 Navn*
               </label>
               <input
+                autoComplete="name"
                 required
                 onChange={(e) => setMail({ ...mail, name: e.target.value })}
                 value={mail.name}
@@ -107,6 +108,7 @@ const Kontakt = () => {
               </label>
               <input
                 onChange={(e) => setMail({ ...mail, phone: e.target.value })}
+                autoComplete="phone"
                 value={mail.phone}
                 type="text"
                 id="tel"
@@ -126,6 +128,7 @@ const Kontakt = () => {
                 E-post*
               </label>
               <input
+                autoComplete="email"
                 onChange={(e) => setMail({ ...mail, email: e.target.value })}
                 value={mail.email}
                 type="email"
