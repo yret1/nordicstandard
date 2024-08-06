@@ -19,6 +19,7 @@ const Services = () => {
           img="https://media.istockphoto.com/id/1395942019/sv/foto/st-hanshaugen.jpg?s=2048x2048&w=is&k=20&c=xxDsVn6QqGK51mDpTTPC6-XOkY02ycPpcvtc0tWyH4E="
           pos="object-center"
           ver="2"
+          alt="Image depicting a house for short-term rental"
           aria-label="Image depicting a house for short-term rental"
         />
         <GridContent
@@ -66,6 +67,7 @@ const Services = () => {
         <GridImg
           img="https://media.istockphoto.com/id/1315262534/sv/foto/f%C3%A4rgglada-radhus-i-centrala-oslo-norge.jpg?s=2048x2048&w=is&k=20&c=ZdiLuxjfaGphIAc-4Pkc9LsQdLsOES5iCs40izt9c7I="
           pos="object-center"
+          alt="Image depicting a cozy street in Oslo norway"
           aria-label="Image depicting a consultation"
         />
       </section>

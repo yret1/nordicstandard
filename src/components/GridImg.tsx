@@ -3,9 +3,10 @@ interface GridImgProps {
   pos: string;
   ver?: string;
   cover?: boolean;
+  alt: string;
 }
 
-const GridImg: React.FC<GridImgProps> = ({ img, pos, ver, cover }) => {
+const GridImg: React.FC<GridImgProps> = ({ img, pos, ver, cover, alt }) => {
   return (
     <section
       className={`relative w-full bg-white  ${
@@ -14,6 +15,7 @@ const GridImg: React.FC<GridImgProps> = ({ img, pos, ver, cover }) => {
     >
       <img
         src={img}
+        alt={alt}
         className={`"absolute top-0 left-0 w-full aspect-square h-full ${
           cover ? "object-contain" : "object-cover"
         } ${pos}`}

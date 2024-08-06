@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -33,7 +33,15 @@ const GridContent: React.FC<GridContentProps> = ({
     threshold: 0.2, // triggers when 10% of the component is in view
   });
 
+  const [target, setTarget] = useState<string>("");
+
   useEffect(() => {
+    if (title == "Superhost!") {
+      setTarget("_blank");
+    } else {
+      setTarget("");
+    }
+
     if (sectionInView) {
       controls.start("visible");
     }
@@ -138,7 +146,7 @@ const GridContent: React.FC<GridContentProps> = ({
           <motion.a
             href={href}
             referrerPolicy="no-referrer"
-            target={title == "Superhost!" ? "_blank" : ""}
+            target={target}
             variants={itemVariants}
           >
             <button className="py-2 px-4  rounded-lg bg-cardbg  shadow-lg hover:bg-contact hover:text-herosub text-sub transition-all duration-100">

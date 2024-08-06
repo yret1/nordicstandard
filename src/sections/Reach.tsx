@@ -15,7 +15,13 @@ const Reach = () => {
           buttonText="Sjekk ut vår profil på Airbnb"
           href="https://www.airbnb.com/users/show/56021483"
         />
-        <GridImg img={Superhost} pos="object-center" cover ver="2" />
+        <GridImg
+          img={Superhost}
+          pos="object-center"
+          alt="Airbnb superhost image"
+          cover
+          ver="2"
+        />
       </section>
     </section>
   );
