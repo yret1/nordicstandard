@@ -40,6 +40,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-2 justify-start items-start md:items-center md:flex-row p-2">
                 <a
                   href="https://www.airbnb.com/users/show/56021483"
+                  aria-label="Link to Airbnb Profile"
                   referrerPolicy="no-referrer"
                   target="_blank"
                   className="text-herohead font-poppins text-opacity-45 w-8 h-8 cursor-pointer group hover:text-opacity-100"

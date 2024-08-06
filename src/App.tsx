@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import CookieConsent from "react-cookie-consent";
+// import CookieConsent from "react-cookie-consent";
 import Hero from "./sections/Hero";
 import Kontakt from "./sections/Kontakt";
 
@@ -30,7 +30,7 @@ function App() {
 
         <Footer />
 
-        <CookieConsent
+        {/* <CookieConsent
           location="bottom"
           buttonText="No problem!"
           style={{ background: "white", color: "black" }}
@@ -47,7 +47,7 @@ function App() {
         >
           We use cookies to enhance your experience. By continuing to visit this
           site you agree to our use of cookies.
-        </CookieConsent>
+        </CookieConsent>*/}
       </section>
     </>
   );
