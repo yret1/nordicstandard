@@ -25,11 +25,12 @@ const Footer = () => {
             </p>
             <ul className="flex flex-col gap-2 justify-start items-start md:flex-row">
               {links.map((item, index) => (
-                <a key={index} href={item.href}>
-                  <li className="text-white font-infant text-opacity-45 cursor-pointer hover:text-opacity-100">
-                    {item.text}
-                  </li>
-                </a>
+                <li
+                  key={index + item.href}
+                  className="text-white font-infant text-opacity-45 cursor-pointer hover:text-opacity-100"
+                >
+                  <a href={item.href}>{item.text}</a>
+                </li>
               ))}
             </ul>
 

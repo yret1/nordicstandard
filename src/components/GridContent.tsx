@@ -88,12 +88,12 @@ const GridContent: React.FC<GridContentProps> = ({
         animate={controls}
         variants={containerVariants}
       >
-        <motion.h4
+        <motion.p
           className="font-bold text-contact font-comorant text-5xl pb-5"
           variants={itemVariants}
         >
           {title}
-        </motion.h4>
+        </motion.p>
         <motion.p
           className="text-sub font-infant text-sm md:text-lg lg:text-2xl"
           variants={itemVariants}
