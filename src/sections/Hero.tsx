@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-screen h-screen bg-[url('./assets/NorwayDesktop.png')] bg-cover"
+      className="w-screen h-screen bg-cover"
       aria-label="Home Section"
     >
       {
