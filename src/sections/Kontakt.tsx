@@ -25,7 +25,7 @@ const Kontakt = () => {
 
     const formData = new FormData(e.currentTarget);
 
-    const key = "9c4cd1b2-5807-456a-b38c-af7a1279bbaf";
+    const key = "f49afa23-f5e6-49c4-8895-625a1fa356a1";
 
     formData.append("access_key", `${key}`);
 
