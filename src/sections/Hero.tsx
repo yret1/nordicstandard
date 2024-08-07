@@ -75,7 +75,7 @@ const Hero = () => {
         </video>
       */}
       <section
-        className="w-full h-full flex justify-center items-center md:justify-center md:items-center bg-black bg-opacity-45 absolute top-0 pb-20 p-5 md:p-10 left-0"
+        className="w-full h-full flex justify-center items-center md:justify-center md:items-center bg-transparent opacity-100 absolute top-0 pb-20 p-5 md:p-10 left-0"
         aria-label="Overlay Section"
       >
         <section

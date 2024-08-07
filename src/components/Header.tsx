@@ -191,7 +191,15 @@ const Header = () => {
           </motion.h1>
         </motion.section>
         <motion.section
-          initial={{ opacity: 0, height: "auto" }}
+          initial={{
+            opacity: 0,
+            height: "auto",
+            backgroundColor: "transparent",
+            color: "white",
+            padding: "0px",
+            borderRadius: "0px",
+            boxShadow: "0 0 0px rgba(0,0,0,0)",
+          }}
           animate={{
             backgroundColor: scrollDistance ? "white" : "transparent",
             padding: scrollDistance ? "10px" : "0px",
@@ -199,7 +207,9 @@ const Header = () => {
             opacity: 1,
             borderRadius: scrollDistance ? "25px" : "0px",
             color: scrollDistance ? "black" : "white",
-            boxShadow: scrollDistance ? "0 0 10px rgba(0,0,0,0.1)" : "none",
+            boxShadow: scrollDistance
+              ? "0 0 10px rgba(0,0,0,0.1)"
+              : "0 0 0px transparent",
           }}
           transition={{ duration: 0.4, ease: "linear", delay: 0.1 }}
           layout
@@ -269,13 +279,21 @@ const Header = () => {
         </section>
 
         <motion.button
+          initial={{
+            padding: "0px",
+            backgroundColor: "transparent",
+            borderRadius: "0px",
+            boxShadow: "0 0 0 rgba(0,0,0,0)",
+          }}
           animate={{
             padding: scrollDistance && !isOpen ? "6px" : "0px",
             backgroundColor:
               scrollDistance && !isOpen ? "black" : "transparent",
             borderRadius: scrollDistance && !isOpen ? "10px" : "0px",
             boxShadow:
-              scrollDistance && !isOpen ? "0 0 10px rgba(0,0,0,0.1)" : "none",
+              scrollDistance && !isOpen
+                ? "0 0 10px rgba(0,0,0,0.1)"
+                : "0 0 0 rgba(0,0,0,0)",
           }}
           onClick={() => setIsOpen(!isOpen)}
           className="z-50"
