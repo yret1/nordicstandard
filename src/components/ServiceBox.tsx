@@ -5,9 +5,13 @@ interface ServiceBoxProps {
 }
 const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, img }) => {
   return (
-    <article className="w-full h-full flex flex-col justify-center items-center gap-4 border-2 border-slate-800 rounded-md  p-6">
-      <section className="flex justify-start w-full gap-5 items-center">
-        <img src={img} alt="Service" className="w-10 h-10 md:w-14 md:h-14" />
+    <article className="w-full h-full flex flex-col justify-center items-center gap-4 border-2 border-slate-800 rounded-md p-6">
+      <section className="flex justify-start w-full gap-3 items-center flex-col ">
+        <img
+          src={img}
+          alt="Service"
+          className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+        />
         <h3 className="font-bold text-lg font-comorant md:text-xl text-contact">
           {title}
         </h3>

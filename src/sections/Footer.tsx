@@ -10,7 +10,7 @@ const Footer = () => {
               Nordisk Standard
               <br />
               <span className="text-lg font-normal font-comorant text-herohead">
-                Din Airbnb Partner
+                Din Boligpartner
               </span>
             </p>
             <p className="text-herosub font-normal font-infant text-opacity-45">

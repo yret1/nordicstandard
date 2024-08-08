@@ -30,7 +30,7 @@ const Services = () => {
         />
       </section>
       <section
-        className="grid w-full lg:w-11/12 xl:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-3 lg:grid-cols-3 md:grid-rows-1"
+        className="grid w-full lg:w-12/12 xl:w-8/12 gap-1 md:gap-2 grid-cols-1 grid-rows-3 lg:grid-cols-3 md:grid-rows-1"
         aria-label="Service Boxes"
       >
         <ServiceBox
