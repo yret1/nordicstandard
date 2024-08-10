@@ -58,7 +58,7 @@ const Services = () => {
         aria-label="Contact Us Section"
       >
         <GridContent
-          desc="Vi tar oss tid til å diskutere dine ønsker og behov for å finne den beste løsningen for deg. Kontakt oss for en uforpliktende samtale"
+          desc="Vi tar oss tid til å diskutere dine ønsker og behov for å finne den beste løsningen for deg."
           title="Kontakt oss"
           buttonText="Kontakt oss for en uforpliktende samtale"
           href="/#kontakt"

@@ -8,14 +8,21 @@ const VIsionbox = () => {
           className="object-cover w-full h-full"
         />
       </div>
-      <article className="w-10/12 flex flex-col gap-6 justify-center items-center">
+      <article className="w-10/12 flex flex-col gap-6 justify-center items-center font-infant">
         <h5 className="text-center font-comorant font-bold text-contact text-3xl md:text-5xl pt-12">
           Hvem er då vi
         </h5>
-        <p className="text-center lg:w-6/12 font-infant text-2xl md:text-3xl text-black">
-          Vi har lang og god erfaring fra salg-, servicebransjen. Vi har jobbet
-          innenfor hotell- og service siden 2012, samt drevet med langsiktig
-          utleie siden 2013.
+        <p className="text-xl md:text-2xl text-black">
+          <span className="font-bold">Tessie</span> er en flink og omsorgsfull
+          sykepleier, med god erfaring fra servicebransjen.
+        </p>
+        <p className="text-xl md:text-2xl text-black">
+          <span className="font-bold">Samir</span> er finansrådgiver og har god
+          erfaring fra hotell og salg. Han har drevet med utleie siden 2013.
+        </p>
+        <p className="text-center font-bold lg:w-6/12 font-infant text-2xl md:text-3xl text-black">
+          Sammen er vi er dedikert team som elsker at yte god service til våre
+          gjester, leietakere og partnere.
         </p>
       </article>
     </section>

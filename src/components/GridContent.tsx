@@ -6,6 +6,7 @@ interface GridContentProps {
   goal?: string;
   title: string;
   desc: string;
+  desc2?: string;
   dataone?: {
     data: string;
     value: string;
@@ -21,6 +22,7 @@ interface GridContentProps {
 const GridContent: React.FC<GridContentProps> = ({
   title,
   desc,
+  desc2,
   goal,
   dataone,
   datatwo,
@@ -99,6 +101,9 @@ const GridContent: React.FC<GridContentProps> = ({
           variants={itemVariants}
         >
           {desc}
+          {desc2 && <br />}
+          {desc2 && <br />}
+          {desc2}
         </motion.p>
       </motion.section>
 
