@@ -8,16 +8,18 @@ const GoalCard = ({
   index?: number;
 }) => {
   return (
-    <section className="w-full md:border-2 md:p-6 rounded-md md:bg-cardbg border-contact  flex md:h-full flex-col justify-start items-center">
+    <section className="w-full md:border-2 md:p-6 rounded-md md:bg-cardbg border-sub  flex md:h-full flex-col justify-start items-center">
       <hr
         className={`w-full block md:hidden ${
           index == 0 ? "hidden" : ""
         } border-opacity-35 border-white`}
       />
       <div className="flex flex-col justify-start items-start gap-2 h-full pt-6 md:pt-0">
-        <p className="font-bold text-xl font-comorant text-contact">{title}</p>
+        <p className="font-bold text-xl font-comorant text-white lg:text-contact">
+          {title}
+        </p>
         <p
-          className={`text-white md:text-sub font-semibold text-xl font-infant`}
+          className={`text-white md:text-sub font-normal text-base md:text-xl font-infant`}
         >
           {description}
         </p>
@@ -33,27 +35,32 @@ const Vision = () => {
       className="w-screen flex justify-center items-center p-6 bg-cover bg-top bg-orango"
     >
       <section className="w-screen flex flex-col justify-center items-center">
-        <p className="font-comorant pb-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-7xl md:pb-20">
-          Vår visjon er at tilby Nordisk Standard på våre gjesteopplevelser
+        <p className="font-comorant pb-12 text-white font-bold text-2xl text-center md:text-4xl lg:text-5xl md:pb-20">
+          Vår visjon er at alle som berøres av vårt selskap, i hvert ledd av
+          våre interaksjoner, skal få oppleve hva Nordisk Standard står for.
         </p>
 
-        <section className="w-screen lg:w-8/12 grid grid-cols-1 md:grid-cols-3 gap-5 p-6 pt-10 md:flex-row ">
+        <p className="text-white font-infant font-bold text-xl md:text-2xl xl:text-4xl">
+          For oss handler Nordisk Standard om:
+        </p>
+
+        <section className="w-screen lg:w-11/12 2xl:w-8/12 grid grid-cols-1 md:grid-cols-3 gap-5 p-6 pt-10 md:flex-row ">
           <GoalCard
             index={0}
-            title="Samarbeid"
-            description="Hos Nordisk Standard er vårt hovedfokus å samarbeide tett med deg som partner for å optimere ditt boende. Vi bygger et nettverk av fagpersoner som kan håndtere alle boligrelaterte utfordringer og forbedre hjemmet ditt etter dine ønsker.
+            title="Trygghet"
+            description="I vårt selskap er trygghet en kjerneverdi. For oss er det avgjørende at både våre partnere og gjester føler seg sikre og godt ivaretatt i alle ledd av samarbeidet. Vi forstår at trygghet er fundamentet for tillit, og vi er stolte av å være en pålitelig partner i alle aspekter av boligforvaltningen.
 "
           />
           <GoalCard
             index={2}
-            title="Service"
+            title="God service"
             description="Vi leverer førsteklasses service og profesjonalitet, og vi lytter alltid til dine tilbakemeldinger for å forbedre oss. Vårt mål er også at alle som besøker Oslo skal få en fantastisk opplevelse av byen vi elsker.
 "
           />
           <GoalCard
             index={3}
-            title="Trygt"
-            description="Gjennom samarbeid, optimalisering og et pålitelig fagnettverk, jobber vi for å vedlike holde boligen din. En del er skeptiske til Airbnb utleie. Det som er godt og hvit er at gjester alltid må ha tidligere vurdering og er avhengig og at fortsatt få god tilbake melding. Var erfaring er at gjester tar godt vare på hjemmet og at de faktiskt blir mindre slitasjen på boligene, då majoriteten er ute og utforsker byen."
+            title="Godt Samarbeid"
+            description="Vi samarbeider med flere forskjellige parter. For oss er det viktig at samarbeidet flyter på godt for alle våre partnere. At være en partnere som andre ønsker å anbefale oss videre til, er en viktig aspekt i vårt ønske for selskapet."
           />
         </section>
       </section>

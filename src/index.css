@@ -12,6 +12,24 @@
  
 }
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(-20%);
+    scale: 125%;
+    transform: translateY(-10%); /* Start 20% off the left */
+  }
+  100% {
+    transform: translateX(0);
+    scale: 125%;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+.animate-slide-in {
+  
+  animation: slideIn 10s ease-in-out forwards;
+}
+
 
 
 .tooltip::after {

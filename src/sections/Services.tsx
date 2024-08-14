@@ -4,11 +4,14 @@ import House from "../assets/House.svg";
 import Coin from "../assets/Coin.svg";
 import GridImg from "../components/GridImg";
 import GridContent from "../components/GridContent";
+import Service from "../assets/Service.avif";
+import Kontakt from "../assets/Kontakt.avif";
+
 const Services = () => {
   return (
     <section
       id="services"
-      className={`w-full flex flex-col justify-center bg-botWave items-center p-4 bg-[#f7efcf] bg-cover bg-bottom pb-32`}
+      className={`w-full flex flex-col justify-center bg-botWave items-center p-4 bg-[#f7efcf] bg-cover bg-bottom relative pb-32`}
       aria-label="Our Services Section"
     >
       <section
@@ -16,7 +19,7 @@ const Services = () => {
         aria-label="Service Offerings"
       >
         <GridImg
-          img="https://media.istockphoto.com/id/1395942019/sv/foto/st-hanshaugen.jpg?s=2048x2048&w=is&k=20&c=xxDsVn6QqGK51mDpTTPC6-XOkY02ycPpcvtc0tWyH4E="
+          img={Service}
           pos="object-center"
           ver="2"
           alt="Image depicting a house for short-term rental"
@@ -35,13 +38,13 @@ const Services = () => {
       >
         <ServiceBox
           title="Korttidsutleie"
-          description="Utleie på kort sikt, enten konstant eller kun når du er på ferie eller skal bort."
+          description="Utleieforhold under 30 dager per utleieforhold. Vi bruker flere utleie-sider for å maksimere dine leieinntekter."
           img={House}
           aria-label="Service box for short-term rental"
         />
         <ServiceBox
           title="Langtidsutleie"
-          description="Utleie for lengre perioder, som for eksempel til studenter eller fastboende."
+          description="Langsiktige utleieforhold der vi administrerer hele utleien for deg."
           img={Plane}
           aria-label="Service box for long-term rental"
         />
@@ -65,7 +68,7 @@ const Services = () => {
           aria-label="Contact us for a consultation"
         />
         <GridImg
-          img="https://media.istockphoto.com/id/1315262534/sv/foto/f%C3%A4rgglada-radhus-i-centrala-oslo-norge.jpg?s=2048x2048&w=is&k=20&c=ZdiLuxjfaGphIAc-4Pkc9LsQdLsOES5iCs40izt9c7I="
+          img={Kontakt}
           pos="object-center"
           alt="Image depicting a cozy street in Oslo norway"
           aria-label="Image depicting a consultation"

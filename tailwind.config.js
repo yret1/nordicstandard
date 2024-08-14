@@ -5,8 +5,8 @@ export default {
     extend: {
       fontFamily: {
         //poppins: ["Poppins", "sans-serif"],
-        infant: ["Cormorant Infant", "serif"],
-        comorant: ["Cormorant SC", "serif"],
+        infant: ["Montserrat", "sans-serif"],
+        comorant: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
         botWave: "url('/src/assets/Mainbg.svg')",

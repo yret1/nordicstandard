@@ -69,7 +69,7 @@ const GridContent: React.FC<GridContentProps> = ({
       animate={controls}
       variants={containerVariants}
       className={`w-full h-full flex flex-col ${
-        title == "Superhost!" ? "justify-between" : "justify-evenly"
+        title == "Superhost!" ? "justify-between" : "justify-start"
       } items-center px-4 z-10`}
       ref={sectionRef}
     >
@@ -85,7 +85,7 @@ const GridContent: React.FC<GridContentProps> = ({
       )}
 
       <motion.section
-        className="w-full py-6"
+        className="w-full flex flex-col justify-start items-start"
         initial="hidden"
         animate={controls}
         variants={containerVariants}
@@ -141,13 +141,13 @@ const GridContent: React.FC<GridContentProps> = ({
         </>
       )}
 
-      <motion.section
-        className="flex justify-start w-full gap-6 py-6"
-        initial="hidden"
-        animate={controls}
-        variants={containerVariants}
-      >
-        {buttonText && (
+      {buttonText && (
+        <motion.section
+          className="flex justify-start w-full gap-6 py-6"
+          initial="hidden"
+          animate={controls}
+          variants={containerVariants}
+        >
           <motion.a
             href={href}
             referrerPolicy="no-referrer"
@@ -158,8 +158,8 @@ const GridContent: React.FC<GridContentProps> = ({
               <p className=" font-medium font-infant text-2xl">{buttonText}</p>
             </button>
           </motion.a>
-        )}
-      </motion.section>
+        </motion.section>
+      )}
     </motion.section>
   );
 };

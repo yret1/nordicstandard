@@ -42,7 +42,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
       </section>
 
       <section className="w-full flex justify-start items-center py-2 gap-2">
-        <p className="font-bold font-infant text-sub text-wrap text-lg">
+        <p className="font-normal font-infant text-sub text-wrap text-lg">
           {review}
         </p>
       </section>

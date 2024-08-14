@@ -102,8 +102,7 @@ const Socialproof = () => {
         />
         <GridContent
           title="Fortrolighet og Trygghet"
-          desc="Vi setter stor pris på fortroligheten som vi har fått fra våre boligpartnere. Med over 400 bookinger og over 300 tilbakemeldinger fra gjestene våre, så jobber vi med høy integritet for boligpartnerne og gjestene våre."
-          desc2="Vi har heldigvis ikke hatt en eneste skade i noe av hjemmene våre (enda). Vi utfører god due diligence på gjestene som vi tar inn i hjemmene."
+          desc="Vi har heldigvis ikke hatt en eneste skade i noen av hjemmene. Vi utfører god due diligence på gjestene som vi tar inn i hjemmene."
           href="/#meriter"
           aria-label="Partner testimonials and ratings"
         />

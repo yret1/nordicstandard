@@ -1,65 +1,45 @@
 //import LandingVideo from "../assets/Landing.mp4";
-import Landing from "../assets/Location.avif";
+import v1 from "../assets/v1.avif";
+import v2 from "../assets/v2.avif";
+import v3 from "../assets/v3.avif";
+import v4 from "../assets/v4.avif";
 import Arrow from "../assets/Arrowdown.svg";
 import Arrowb from "../assets/Arrowdownb.svg";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playingForward, setPlayingForward] = useState(true);
-  const [intervalId, setIntervalId] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [v1, v2, v3, v4];
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const interval = setInterval(() => {
+      // Update the index to the next image, looping back to 0 at the end
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 10000); // Change image every 3 seconds
 
-    const handleEnded = () => {
-      setPlayingForward(false);
-      if (intervalId) clearInterval(intervalId);
-      const id = window.setInterval(() => {
-        if (video.currentTime <= 0) {
-          clearInterval(id);
-          setPlayingForward(true);
-          video.play();
-        } else {
-          video.currentTime -= 0.1; // Adjust this value for the reverse speed
-        }
-      }, 100); // Adjust this value for the reverse speed
-      setIntervalId(id);
-    };
-
-    const handleTimeUpdate = () => {
-      if (playingForward && video.currentTime >= video.duration) {
-        video.pause();
-        handleEnded();
-      }
-    };
-
-    video.addEventListener("ended", handleEnded);
-    video.addEventListener("timeupdate", handleTimeUpdate);
-
-    // Clean up event listeners and interval on component unmount
-    return () => {
-      video.removeEventListener("ended", handleEnded);
-      video.removeEventListener("timeupdate", handleTimeUpdate);
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [playingForward, intervalId]);
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
 
   return (
     <section
       id="home"
-      className="w-screen h-screen bg-cover"
+      className="w-screen h-screen bg-cover overflow-hidden"
       aria-label="Home Section"
     >
-      {
+      {images.map((image, index) => (
         <img
-          src={Landing}
-          alt="Oslo image"
-          className="w-full h-full object-cover absolute top-0 left-0"
+          key={index}
+          src={image}
+          alt={`Image ${index}`}
+          className={`w-full h-full object-cover absolute scale-125 top-0 left-0 inset-0 transition-opacity duration-1000 transform ${
+            index === currentIndex
+              ? "opacity-100 animate-slide-in"
+              : "opacity-0"
+          }`}
         />
-      }
+      ))}
       {/** 
         <video
           autoPlay
@@ -93,7 +73,7 @@ const Hero = () => {
               y: 0,
             }}
             transition={{ delay: 0.2, ease: "anticipate" }}
-            className="text-herohead text-center font-bold text-4xl font-comorant md:text-5xl lg:text-6xl md:drop-shadow-lg"
+            className="text-herohead text-center font-bold text-4xl font-comorant md:text-5xl lg:text-6xl drop-shadow-xl"
             aria-label="Main Heading"
           >
             Din Utleiepartner
@@ -109,7 +89,7 @@ const Hero = () => {
               y: 0,
             }}
             transition={{ delay: 0.3, ease: "anticipate" }}
-            className="text-herosub font-medium text-center text-lg md:text-xl lg:text-2xl font-infant"
+            className="text-herosub font-medium text-center text-lg md:text-xl lg:text-2xl font-infant drop-shadow-xl"
             aria-label="Subheading"
           >
             Vi frigjør din viktigste resurs, din tid.
