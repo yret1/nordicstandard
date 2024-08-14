@@ -59,32 +59,22 @@ const Socialproof = () => {
     },
   ];
 
-  /*const reviews = [
+  const reviews = [
     {
-      name: "Lise Hansen",
-      title: "CEO",
-      img: "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?q=80&w=3344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Humberto",
+
       rating: 5,
       review:
-        "Vi er svært fornøyde med samarbeidet med Nordisk Standard. De har vist stor kompetanse i å administrere vår Airbnb-eiendom, og vi har sett betydelig økning i inntektene våre. En pålitelig partner vi setter stor pris på.",
+        "Samir og Tessie har gjort det mulig for meg å få ut mye mer av min utleie. Jeg kan nå dra på ferie å vite at utleien min blir tatt godt vare på mens jeg er borte. Jeg er kjempefornøyd med samarbeidet til Tessie og Samir i Nordisk Standard. Anbefaler dem sterkt!",
     },
     {
       name: "Kari Berg",
-      title: "CEO",
-      img: "https://images.unsplash.com/photo-1616325629936-99a9013c29c6?q=80&w=3671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
       rating: 5,
       review:
-        "Nordisk Standard har overgått våre forventninger. De har håndtert alt fra booking til vedlikehold med høy profesjonalitet og engasjement. Vår eiendom har aldri vært i bedre hender.",
+        "Samir og Tessie kontaktet meg når jeg skulle leie ut min bolig for langsiktig leie på Finn i april. Vi hadde et hyggelig møte og jeg testet dem ut. Jeg har nå fått flera tusen mer i leieinntekter hver måned og mye mindre arbeid med min utleie. De er kjempegode og trygge at samarbeide med, anbefaler sterkt!",
     },
-    {
-      name: "Erik Johansen",
-      title: "CEO",
-      img: "https://images.unsplash.com/photo-1492633397843-92adffad3d1c?q=80&w=3773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      rating: 5,
-      review:
-        "Å jobbe med Nordisk Standard har vært en veldig positiv opplevelse. De har gjort en utmerket jobb med å leie ut vår eiendom, og kommunikasjonen har vært topp. Vi er veldig glade for å ha dem som vår partner.",
-    },
-  ];//*/
+  ]; //*/
   return (
     <section
       id="meriter"
@@ -108,22 +98,20 @@ const Socialproof = () => {
         />
       </section>
       <Reach />
-      {/*<p className="text-contact font-comorant font-bold py-10 md:text-4xl text-2xl lg:text-5xl">
-        Se hva våre partnere sier!
+      <p className="text-contact font-comorant font-bold py-10 md:text-4xl text-2xl lg:text-5xl">
+        Dette sier noen av våre partnere!
       </p>
-      <section className="w-screen md:w-12/12 lg:w-11/12 xl:w-10/12 2xl:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-1 lg:grid-cols-3 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
+      <section className="w-screen md:w-12/12 lg:w-11/12 xl:w-10/12 2xl:w-8/12 py-12 grid place-items-center justify-items-center grid-cols-1 md:grid-cols-1  lg:grid-cols-2 p-2 md:p-4 lg:p-6 gap-2 md:gap-4 lg:gap-6">
         {reviews.slice(0, numReviews).map((review, index) => (
           <SocialCard
             key={index}
             name={review.name}
-            title={review.title}
-            img={review.img}
             rating={review.rating}
             review={review.review}
           />
         ))}
       </section>
-*/}
+
       <p className="text-contact font-comorant font-bold py-10 md:text-4xl text-2xl lg:text-5xl">
         Se hva våre gjester sier!
       </p>
@@ -132,7 +120,6 @@ const Socialproof = () => {
           <SocialCard
             key={index + review.name}
             name={review.name}
-            img={review.img}
             rating={review.rating}
             review={review.review}
           />
