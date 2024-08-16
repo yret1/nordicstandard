@@ -68,7 +68,7 @@ const Kontakt = () => {
         </p>
         <hr className="w-full border-contact" />
         <p className="text-contact text-4xl font-comorant pt-10">
-          Bli våran boligparnet
+          Kontakt oss for en uforpliktende samtale
         </p>
       </section>
 

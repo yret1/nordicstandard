@@ -1,7 +1,7 @@
 //import LandingVideo from "../assets/Landing.mp4";
 import v1 from "../assets/v1.avif";
 import v2 from "../assets/v2.avif";
-import v3 from "../assets/v3.avif";
+// import v3 from "../assets/v3.avif";
 import v4 from "../assets/v4.avif";
 import Arrow from "../assets/Arrowdown.svg";
 import Arrowb from "../assets/Arrowdownb.svg";
@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [v1, v2, v3, v4];
+  const images = [v2, v1, v4];
 
   useEffect(() => {
     const interval = setInterval(() => {
