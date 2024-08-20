@@ -13,7 +13,7 @@ import { debounce } from "framer/render/utils/debounce.js";
 export const links = [
   {
     text: "Tjenester",
-    description: "Se våre tjenester og hva vi kan tilby deg og din bedrift!",
+    description: "Se våre tjenester og hva vi kan tilby deg!",
     href: "/#services",
   },
   {
@@ -23,18 +23,17 @@ export const links = [
   },
   {
     text: "Visjon",
-    description:
-      "Vår visjon er å skape en bedre verden for alle. Les mer om vår visjon!",
+    description: "Les mer om vår visjon!",
     href: "/#visjon",
   },
   {
     text: "Om Oss",
-    description: "Les om oss og vår historie. Se hvem som står bak selskapet!",
+    description: "Se hvem som står bak selskapet!",
     href: "/#om",
   },
   {
     text: "Kontakt",
-    description: "Kontakt oss for mer informasjon. Vi svarer innen 24 timer!",
+    description: "Ta kontakt for en hyggelig prat.",
     href: "/#kontakt",
   },
 ];

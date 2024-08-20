@@ -95,7 +95,7 @@ const Kontakt = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Fullt navn"
+                placeholder="For- og etternavn"
                 className="w-full font-infant p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>
@@ -113,7 +113,7 @@ const Kontakt = () => {
                 type="text"
                 id="tel"
                 name="tel"
-                placeholder="+12 345 678"
+                placeholder="Tel: 1234 5678"
                 className="w-full font-infant p-4 border-[1px] border-borders rounded-md active:border-buttonhover"
               />
             </section>

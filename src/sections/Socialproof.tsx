@@ -68,7 +68,7 @@ const Socialproof = () => {
         "Samir og Tessie har gjort det mulig for meg å få ut mye mer av min utleie. Jeg kan nå dra på ferie å vite at utleien min blir tatt godt vare på mens jeg er borte. Jeg er kjempefornøyd med samarbeidet til Tessie og Samir i Nordisk Standard. Anbefaler dem sterkt!",
     },
     {
-      name: "Kari Berg",
+      name: "Caren",
 
       rating: 5,
       review:

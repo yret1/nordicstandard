@@ -48,7 +48,7 @@ const Vision = () => {
           <GoalCard
             index={0}
             title="Trygghet"
-            description="I vårt selskap er trygghet en kjerneverdi. For oss er det avgjørende at både våre partnere og gjester føler seg sikre og godt ivaretatt i alle ledd av samarbeidet. Vi forstår at trygghet er fundamentet for tillit, og vi er stolte av å være en pålitelig partner i alle aspekter av boligforvaltningen.
+            description="I vårt selskap er trygghet en kjerneverdi. For oss er det avgjørende at både våre partnere og gjester føler seg sikre og godt ivaretatt i alle ledd av samarbeidet. Vi forstår at trygghet er et fundament for tillit, og vi er stolte av å være en pålitelig partner i alle aspekter av boligforvaltningen.
 "
           />
           <GoalCard
