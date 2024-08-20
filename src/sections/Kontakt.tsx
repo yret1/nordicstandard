@@ -3,7 +3,7 @@ import { useState } from "react";
 const Kontakt = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const [result, setResult] = useState("Sende melding");
+  const [result, setResult] = useState("Send melding");
   const [sent, setSent] = useState(false);
   const [mail, setMail] = useState({
     name: "",
@@ -19,7 +19,7 @@ const Kontakt = () => {
       setResult("Please fill in all fields");
 
       setTimeout(() => {
-        setResult("Sende melding");
+        setResult("Send melding");
       });
     } else setSubmitting(true);
 
@@ -49,7 +49,7 @@ const Kontakt = () => {
       setSent(true);
 
       setTimeout(() => {
-        setResult("Sende melding");
+        setResult("Send melding");
       }, 2000);
     } else {
       console.log("Error", data);
@@ -170,7 +170,7 @@ const Kontakt = () => {
               >
                 {submitting && <p>Sender...</p>}
                 {!submitting && result && <p>{result}</p>}
-                {!submitting && !result && !sent && <p>Sende melding</p>}
+                {!submitting && !result && !sent && <p>Send melding</p>}
               </button>
             </section>
           </fieldset>
