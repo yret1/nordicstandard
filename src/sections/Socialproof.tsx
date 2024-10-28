@@ -74,6 +74,12 @@ const Socialproof = () => {
       review:
         "Samir og Tessie kontaktet meg når jeg skulle leie ut min bolig for langsiktig leie på Finn i april. Vi hadde et hyggelig møte og jeg testet dem ut. Jeg har nå fått flera tusen mer i leieinntekter hver måned og mye mindre arbeid med min utleie. De er kjempegode og trygge at samarbeide med, anbefaler sterkt!",
     },
+    {
+      name: "Cilia",
+      rating: 5,
+      review:
+        "Samir og Tessie kontaktet meg via Airbnb å spurte meg om de kunne forvalte min utleie for meg. Jeg testet det ut og har vært kjempefornøyd med boligforvaltningen og samarbeidet. Samir og Tessie er svært enkle å kommunisere med, tar initiativ til forbedringer og ansvar for påfyll av gjenbruksartikler. Det har vært helt gull å kunne overlate utleien av leiligheten min til noen man kan stole på og samtidig spare inn verdifull tid",
+    },
   ]; //*/
   return (
     <section
