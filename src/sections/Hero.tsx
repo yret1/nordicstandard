@@ -32,7 +32,7 @@ const Hero = () => {
         <img
           key={index}
           src={image}
-          alt={`Image ${index}`}
+         alt="Korttidsutleie og utleieforvaltning av leilighet i Oslo – Nordisk Standard"
           className={`w-full h-full object-cover absolute scale-125 top-0 left-0 inset-0 transition-opacity duration-1000 transform ${
             index === currentIndex
               ? "opacity-100 animate-slide-in"
@@ -76,7 +76,7 @@ const Hero = () => {
             className="text-herohead text-center font-bold text-4xl font-comorant md:text-5xl lg:text-6xl drop-shadow-xl"
             aria-label="Main Heading"
           >
-            Din Utleiepartner
+            Profesjonell korttidsutleie av leilighet i Oslo med full utleieforvaltning og økt inntektspotensial
           </motion.h2>
           <motion.p
             layout
@@ -92,7 +92,7 @@ const Hero = () => {
             className="text-herosub font-medium text-center text-lg md:text-xl lg:text-2xl font-infant drop-shadow-xl"
             aria-label="Subheading"
           >
-            Vi frigjør din viktigste resurs, din tid.
+            Nordisk Standard tilbyr komplett utleieforvaltning i Oslo. Vi håndterer hele prosessen for deg, fra annonsering og prisoptimalisering til gjestekommunikasjon og drift, slik at du oppnår best mulig inntekt med minimal innsats og full fleksibilitet som boligeier.
           </motion.p>
           <motion.a
             href="/#services"
