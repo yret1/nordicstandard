@@ -1,4 +1,3 @@
 User-agent: *
-indexing: true
-Allow: /public/
-Allow: /src/
+Allow: /
+Sitemap: https://nordiskstandard.no/sitemap.xml
