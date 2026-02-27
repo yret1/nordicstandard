@@ -27,7 +27,7 @@ const Services = () => {
         />
         <GridContent
           desc="Vi håndterer din utleie for deg og optimerer leieinntektene dine."
-          title="Hva tilbyr vi?"
+          title="Utleieforvaltning i Oslo – korttidsutleie, langtidsutleie og kombinasjonsutleie"
           href="/#services"
           aria-label="Description of our offerings"
         />
