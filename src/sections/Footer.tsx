@@ -67,7 +67,7 @@ const Footer = () => {
                 </li>
 
 <li>
-  
+  <a
     href="https://www.instagram.com/nordiskstandard"
     aria-label="Link to Instagram Profile"
     referrerPolicy="no-referrer"
